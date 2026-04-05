@@ -23,22 +23,22 @@ export const PRODUCT_SHELF_COPY: Record<ProductShelfKey, CategoryCopy> = {
   },
   skincareLine: {
     chip: "Botanical Skincare",
-    title: "Clinical",
-    titleAccent: "Formulations",
+    title: "Advance",
+    titleAccent: "Skin Care",
     description:
       "Doctor-formulated, bio-active topical solutions engineered to restore the epidermal barrier, optimize cellular regeneration, and deliver timeless radiance.",
   },
   oralCareLine: {
     chip: "Microbiome Balancing",
-    title: "Clinical",
-    titleAccent: "Formulations",
+    title: "Advance",
+    titleAccent: "Oral Care",
     description:
       "Therapeutic oral formulations designed to optimize the oral microbiome, strengthen enamel integrity, and sustain long-term mucosal health naturally.",
   },
   nightRitual: {
     chip: "Circadian Renewal",
-    title: "Clinical",
-    titleAccent: "Formulations",
+    title: "Night",
+    titleAccent: "Ritual",
     description:
       "Synergistic evening formulations calibrated to reduce neuro-inflammation, alleviate systemic stress, and induce deep, restorative sleep architectures.",
   },

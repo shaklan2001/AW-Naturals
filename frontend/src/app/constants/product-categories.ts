@@ -16,12 +16,12 @@ export const PRODUCT_CATEGORY_NAV = [
     to: "/products?category=Herbal%20Infusions",
   },
   {
-    label: "Oral care line",
+    label: "Advance Oral Care",
     value: PRODUCT_CATEGORY.oralCareLine,
     to: "/products?category=Oral%20Care%20Line",
   },
   {
-    label: "Skincare line",
+    label: "Advance SkinCare",
     value: PRODUCT_CATEGORY.skincareLine,
     to: "/products?category=Skincare%20Line",
   },
