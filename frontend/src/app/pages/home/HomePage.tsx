@@ -6,7 +6,8 @@ import { BrewingRitual } from '../../components/BrewingRitual';
 import { Testimonials } from '../../components/Testimonials';
 import { FaqSection } from '../../components/FaqSection';
 import { WellnessQuiz } from '../wellness/components/WellnessQuiz';
-import { HomeCarouselHero } from './components/HomeCarouselHero';
+// import { HomeCarouselHero } from './components/HomeCarouselHero';
+import { FindYourBlendSection } from './components/FindYourBlendSection';
 import { MainHero } from './components/MainHero';
 
 export function HomePage() {
@@ -16,10 +17,11 @@ export function HomePage() {
             <TrustStrip />
             <ExpertiseSection />
             <ProductShowcase />
-            <WellnessQuiz />
+            <FindYourBlendSection />
             <BrewingRitual />
-            <HomeCarouselHero />
+            {/* <HomeCarouselHero /> */}
             <BundleSection />
+            <WellnessQuiz />
             <Testimonials />
             <FaqSection />
         </div>
