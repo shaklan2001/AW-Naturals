@@ -5,6 +5,8 @@ import { ImageWithFallback } from '@/shared/components/ImageWithFallback';
 import { SITE_CONTAINER_CLASS } from '../../../constants/site-layout';
 import { cn } from '../../../components/ui/utils';
 
+import { PRODUCT_SHELF_COPY } from '../../../constants/product-category-copy';
+
 type RitualCard = {
     key: string;
     label: string;
@@ -18,36 +20,31 @@ type RitualCard = {
 
 const RITUAL_CARDS: RitualCard[] = [
     {
-        key: 'brewing-quiz',
-        label: 'Brewing Rituals — Find Your Blend',
-        title: 'Find Your Perfect Blend',
-        description:
-            'Energy? Balance? Sleep? Take the 3-question quiz to find your ritual. Next page will show your results.',
-        cta: 'Find Your Blend',
-        to: '/find-your-blend',
-        featured: true,
-        image: (
-            <div className="relative aspect-[3/2] w-full overflow-hidden bg-[#f3f3f1] flex items-center justify-center">
-                <ImageWithFallback
-                    src="/assets/confuse_1.webp"
-                    alt="Choose your blend illustration"
-                    className="h-full w-auto object-contain"
-                />
-            </div>
-        ),
-    },
-    {
-        key: 'oral-skin',
-        label: 'Oral Care & Skin Care Rituals',
-        title: 'Oral Care & Skin Care',
-        description:
-            'Daily Purification. Transform daily hygiene into a spa ritual. Expert oral care and chemical-free skincare.',
-        cta: 'Shop Rituals',
+        key: 'oral-care',
+        label: PRODUCT_SHELF_COPY.oralCareLine.chip,
+        title: 'Advance Oral Care',
+        description: PRODUCT_SHELF_COPY.oralCareLine.description,
+        cta: 'Shop Oral Care',
         to: '/products?category=Oral%20Care%20Line',
         image: (
             <ImageWithFallback
+                src="/assets/home_page.webp"
+                alt="Natural botanical setting for advance oral care rituals"
+                className="aspect-[3/2] w-full object-cover"
+            />
+        ),
+    },
+    {
+        key: 'skin-care',
+        label: PRODUCT_SHELF_COPY.skincareLine.chip,
+        title: 'Advance Skin Care',
+        description: PRODUCT_SHELF_COPY.skincareLine.description,
+        cta: 'Shop Skin Care',
+        to: '/products?category=Skincare%20Line',
+        image: (
+            <ImageWithFallback
                 src="/assets/soap_bar.png"
-                alt="Botanical face bar for daily skin care"
+                alt="Botanical face bar for advance skin care"
                 className="aspect-[3/2] w-full object-cover"
             />
         ),
@@ -85,7 +82,7 @@ function RitualCtaButton({ to, children, centered }: { to: string; children: str
     );
 }
 
-/** Home-page ritual categories — quiz, oral/skin care, and night oil. */
+/** Home-page ritual categories — oral care, skin care, and night oil. */
 export function WellnessQuiz() {
     return (
         <section className="relative overflow-hidden bg-[#0B0B0B] py-24">
