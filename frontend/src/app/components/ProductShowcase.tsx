@@ -90,14 +90,14 @@ export function ProductShowcase() {
         >
           <div className="mb-4 inline-flex px-4 py-1.5 rounded-full border border-[#C6A85B]/30 bg-[#151515] backdrop-blur-md">
             <span className="font-['Inter'] text-[10px] font-medium tracking-[0.2em] uppercase text-[#C6A85B]">
-              Discover Your Cure
+              Discover Your Balance
             </span>
           </div>
           <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[44px] md:text-[56px] mb-2 text-[#F5F5DC] leading-none" style={{ fontWeight: 600 }}>
-            Clinical <GradientText>Insights</GradientText>
+            Premium <GradientText>Blend</GradientText>
           </h2>
           <p className="font-['Inter'] text-[16px] md:text-[18px] text-[#F5F5DC]/60 font-light">
-            An interactive exploration of targeted wellness.
+            An interactive guide to target Wellbeing
           </p>
         </motion.div>
 

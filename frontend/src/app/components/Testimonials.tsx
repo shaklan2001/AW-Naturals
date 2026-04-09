@@ -153,7 +153,7 @@ export function Testimonials() {
                         className="mb-6 font-['Cormorant_Garamond',serif] font-semibold text-[48px] leading-none tracking-tight text-[#F5F5DC] md:text-[56px] lg:text-[64px]"
                         style={{ fontWeight: 600 }}
                     >
-                        Clinical <span className="italic text-[#C6A85B]">Validation</span>
+                        Trusted <span className="italic text-[#C6A85B]">tail</span>
                     </h2>
                     <div className="mx-auto mt-12 flex max-w-5xl justify-center gap-4 md:mt-16 md:gap-6">
                         {[0, 1, 2].map((i) => (
@@ -232,10 +232,10 @@ export function Testimonials() {
                         className="mb-4 font-['Cormorant_Garamond',serif] font-semibold text-[36px] leading-none tracking-tight text-[#F5F5DC] sm:text-[48px] md:mb-6 md:text-[56px] lg:text-[64px]"
                         style={{ fontWeight: 600 }}
                     >
-                        Clinical{' '}
+                        Trusted{' '}
                         <span className="relative inline-block">
                             <span className="relative bg-gradient-to-r from-[#C6A85B] via-[#E5D08A] to-[#C6A85B] bg-[length:200%_100%] bg-clip-text italic text-transparent animate-shine">
-                                Validation
+                                Tails
                             </span>
                         </span>
                     </h2>

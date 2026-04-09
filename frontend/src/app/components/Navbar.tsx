@@ -135,9 +135,9 @@ export function Navbar() {
                                     'relative inline-flex h-11 shrink-0 items-center gap-1 border-0 bg-transparent pb-1 text-[12px] leading-none uppercase tracking-[0.04em] outline-none transition-colors duration-300 sm:text-[13px]',
                                     isProductsRoute ? 'font-semibold text-[#D4AF37]' : 'text-white/50 hover:text-white/90',
                                 )}
-                                aria-label="Products menu"
+                                aria-label="Shop menu"
                             >
-                                Products
+                                Shop
                                 <ChevronDown className="h-3.5 w-3.5 opacity-70" aria-hidden />
                                 {isProductsRoute && (
                                     <motion.span
@@ -374,7 +374,7 @@ export function Navbar() {
                                     About us
                                 </MobileNavLink>
                                 
-                                {/* Products Accordion */}
+                                {/* Shop Accordion */}
                                 <div className="py-1">
                                     <button
                                         type="button"
@@ -387,7 +387,7 @@ export function Navbar() {
                                         )}
                                         aria-expanded={mobileProductsOpen}
                                     >
-                                        Products
+                                        Shop
                                         <ChevronDown
                                             className={cn('h-4 w-4 transition-transform duration-200', mobileProductsOpen && 'rotate-180')}
                                             aria-hidden

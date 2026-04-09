@@ -57,9 +57,9 @@ export function BrewingRitual() {
         </div>
         
         <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[48px] md:text-[64px] leading-[1.1] mb-6">
-          <span className="text-white">The Clinical</span>{' '}
+          <span className="text-white">Brewing</span>{' '}
           <span className="inline-block italic bg-gradient-to-r from-[#C6A85B] to-[#E5D08A] bg-clip-text text-transparent [background-clip:text] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
-            Brewing Ritual
+            Ritual
           </span>
         </h2>
         <p className="font-['Inter'] text-[16px] text-[#F5F5DC]/60 font-light max-w-xl mx-auto leading-relaxed">
