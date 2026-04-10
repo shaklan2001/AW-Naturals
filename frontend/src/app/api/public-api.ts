@@ -16,7 +16,7 @@ export type StorefrontProduct = {
   id: string;
   name: string;
   shortDescription?: string;
-  benefit: string;
+  benefit?: string;
   description: string;
   price: number;
   image: string;

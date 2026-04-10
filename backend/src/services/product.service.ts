@@ -14,8 +14,8 @@ export function mapProductPublic(p: Product) {
   return {
     id: p.id,
     name: p.name,
-    shortDescription: p.shortDescription?.trim() || p.description,
-    benefit: p.benefit ?? p.category,
+    shortDescription: optionalText(p.shortDescription) ?? undefined,
+    benefit: optionalText(p.benefit) ?? undefined,
     description: p.description,
     price: toNumber(p.price),
     image,
