@@ -16,45 +16,25 @@ type RitualCard = {
     image: ReactNode;
 };
 
-function BrewingRitualImage() {
-    const boxes = [
-        { src: '/assets/tranparent-bg-box/Merigold.webp', alt: 'Marigold Premium Infusion', className: 'left-[10%] bottom-[6%] z-10 -rotate-6 scale-[0.82]' },
-        { src: '/assets/tranparent-bg-box/Chamomile.webp', alt: 'Chamomile Bliss Infusion', className: 'left-[35%] bottom-[12%] z-20 rotate-2 scale-[0.88]' },
-        { src: '/assets/tranparent-bg-box/Ginger.webp', alt: 'Ginger & Berberis Infusion', className: 'right-[8%] bottom-[4%] z-30 rotate-6 scale-[0.84]' },
-    ];
-
-    return (
-        <div className="relative aspect-[3/2] w-full overflow-hidden bg-[#e7e2d8]">
-            <div
-                className="absolute inset-0 opacity-60"
-                style={{
-                    background:
-                        'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(120,95,60,0.18) 0%, transparent 70%)',
-                }}
-            />
-            {boxes.map((box) => (
-                <ImageWithFallback
-                    key={box.src}
-                    src={box.src}
-                    alt={box.alt}
-                    className={cn('absolute h-[70%] w-auto max-w-[42%] object-contain drop-shadow-2xl', box.className)}
-                />
-            ))}
-        </div>
-    );
-}
-
 const RITUAL_CARDS: RitualCard[] = [
     {
         key: 'brewing-quiz',
         label: 'Brewing Rituals — Find Your Blend',
-        title: 'Find Your Perfect Blend Quiz',
+        title: 'Find Your Perfect Blend',
         description:
             'Energy? Balance? Sleep? Take the 3-question quiz to find your ritual. Next page will show your results.',
-        cta: 'Quiz: Find Your Blend',
+        cta: 'Find Your Blend',
         to: '/find-your-blend',
         featured: true,
-        image: <BrewingRitualImage />,
+        image: (
+            <div className="relative aspect-[3/2] w-full overflow-hidden bg-[#f3f3f1] flex items-center justify-center">
+                <ImageWithFallback
+                    src="/assets/confuse_1.webp"
+                    alt="Choose your blend illustration"
+                    className="h-full w-auto object-contain"
+                />
+            </div>
+        ),
     },
     {
         key: 'oral-skin',
@@ -148,34 +128,17 @@ export function WellnessQuiz() {
                                     {card.image}
                                 </div>
 
-                                <div
-                                    className={cn(
-                                        'flex flex-1 flex-col px-6 py-6',
-                                        card.featured ? 'items-center text-center' : 'items-start text-left'
-                                    )}
-                                >
-                                    <h3
-                                        className={cn(
-                                            'font-[\'Cormorant_Garamond\',serif] font-semibold text-white',
-                                            card.featured
-                                                ? 'text-[18px] uppercase tracking-[0.08em]'
-                                                : 'text-[26px] leading-tight'
-                                        )}
-                                    >
+                                <div className="flex flex-1 flex-col px-6 py-6 items-start text-left">
+                                    <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-white text-[26px] leading-tight">
                                         {card.title}
                                     </h3>
 
-                                    <p
-                                        className={cn(
-                                            'mt-4 font-[\'Inter\'] text-[14px] font-light leading-relaxed text-white/60',
-                                            card.featured ? 'max-w-[260px]' : 'max-w-none'
-                                        )}
-                                    >
+                                    <p className="mt-4 font-['Inter'] text-[14px] font-light leading-relaxed text-white/60">
                                         {card.description}
                                     </p>
 
-                                    <div className={cn('mt-auto pt-7', card.featured && 'flex w-full justify-center')}>
-                                        <RitualCtaButton to={card.to} centered={card.featured}>
+                                    <div className="mt-auto pt-7">
+                                        <RitualCtaButton to={card.to} centered={false}>
                                             {card.cta}
                                         </RitualCtaButton>
                                     </div>
