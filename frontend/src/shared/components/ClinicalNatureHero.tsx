@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { ArrowUpRight, Leaf } from 'lucide-react';
 
 const SITE_GOLD = '#C9A84C';
-const HOME_BG = '/assets/';
+const HOME_BG = '/assets/home_page.webp';
 
 const heroStoryDisplay =
     "font-['Cormorant_Garamond',serif] italic font-semibold [font-size:clamp(2.5rem,7vw,5rem)] md:[font-size:clamp(6vw,7.5vw,9vw)] leading-[0.95] tracking-[-0.02em] text-[#FAF6ED] drop-shadow-xl [text-shadow:0_2px_28px_rgba(0,0,0,0.55),0_1px_3px_rgba(0,0,0,0.85)]";
@@ -75,8 +75,11 @@ export function ClinicalNatureHero({
                 <img
                     src={bgUrl}
                     alt=""
-                    className="absolute inset-0 h-full w-full object-cover"
-                    style={{ objectPosition: 'center 70%' }}
+                    className={`absolute inset-0 h-full w-full object-cover ${
+                        isHome
+                            ? 'object-[50%_74%] sm:object-[50%_80%] lg:object-[50%_92%] xl:object-bottom'
+                            : 'object-[center_70%]'
+                    }`}
                 />
             </div>
 
