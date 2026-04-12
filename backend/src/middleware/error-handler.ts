@@ -1,6 +1,45 @@
 import type { NextFunction, Request, Response } from "express";
 import type { MulterError } from "multer";
+import { Prisma } from "@prisma/client";
 import { ZodError } from "zod";
+
+const GENERIC_SERVER_ERROR = "Something went wrong. Please try again later.";
+const DATABASE_ERROR = "A database error occurred. Please try again later.";
+
+function isPrismaClientError(err: unknown): boolean {
+  return (
+    err instanceof Prisma.PrismaClientKnownRequestError ||
+    err instanceof Prisma.PrismaClientUnknownRequestError ||
+    err instanceof Prisma.PrismaClientInitializationError ||
+    err instanceof Prisma.PrismaClientRustPanicError ||
+    err instanceof Prisma.PrismaClientValidationError
+  );
+}
+
+function looksLikeInternalError(message: string): boolean {
+  return (
+    message.includes("Invalid `prisma.") ||
+    message.includes("invocation in") ||
+    message.includes("denied access on the database") ||
+    message.includes("ECONNREFUSED") ||
+    message.includes("Can't reach database") ||
+    /\/(?:var\/www|backend\/src)\//.test(message)
+  );
+}
+
+/** Maps thrown errors to a safe message for API clients (never leak stack paths or SQL). */
+export function clientErrorMessage(err: unknown, isProduction: boolean): string {
+  if (!isProduction) {
+    return err instanceof Error ? err.message : "Internal server error";
+  }
+  if (isPrismaClientError(err)) {
+    return DATABASE_ERROR;
+  }
+  if (err instanceof Error && looksLikeInternalError(err.message)) {
+    return DATABASE_ERROR;
+  }
+  return GENERIC_SERVER_ERROR;
+}
 
 export class HttpError extends Error {
   constructor(
@@ -41,8 +80,8 @@ export function errorHandler(
       return;
     }
   }
-  const message = err instanceof Error ? err.message : "Internal server error";
   console.error(err);
+  const message = clientErrorMessage(err, process.env.NODE_ENV === "production");
   res.status(500).json({ error: message });
 }
 
