@@ -2,10 +2,23 @@ import React from 'react';
 
 const HERO_IMAGE = '/assets/home_page.webp';
 
+const line1Style: React.CSSProperties = {
+    fontSize: 'clamp(1.18125rem, 0.9975rem + 0.945vw, 1.8375rem)',
+    lineHeight: 1.3,
+    fontWeight: 600,
+};
+
+const line2Style: React.CSSProperties = {
+    fontSize: 'clamp(2.9625rem, 2.1375rem + 3.675vw, 5.775rem)',
+    lineHeight: 1.05,
+    fontWeight: 700,
+};
+
 export function MainHero() {
     return (
-        <section className="relative z-10 flex min-h-[100svh] w-full flex-col overflow-hidden bg-[#0B0B0B] pb-0">
-            <div className="absolute inset-0 z-0 flex flex-col justify-end bg-[#0B0B0B]">
+        <section className="relative z-10 min-h-[100svh] w-full overflow-hidden bg-[#0B0B0B]">
+            {/* Full-bleed background — always fills viewport on every screen size */}
+            <div className="absolute inset-0 z-0">
                 <img
                     src={HERO_IMAGE}
                     alt="AW Naturals — clinical herbal tea infusions and wellness products"
@@ -13,7 +26,7 @@ export function MainHero() {
                     height={941}
                     decoding="async"
                     fetchPriority="high"
-                    className="block h-auto w-full max-h-[100svh]"
+                    className="h-full w-full object-cover object-[50%_78%] sm:object-[50%_82%] lg:object-[50%_88%] xl:object-[50%_92%] 2xl:object-[50%_94%]"
                 />
 
                 {/* Headline legibility — light touch so products stay visible */}
@@ -22,30 +35,44 @@ export function MainHero() {
                     aria-hidden
                     style={{
                         background:
-                            'radial-gradient(ellipse 80% 50% at 50% 30%, rgba(0,0,0,0.38) 0%, transparent 65%), linear-gradient(to bottom, rgba(11,11,11,0.3) 0%, transparent 18%, transparent 70%, rgba(11,11,11,0.2) 100%)',
+                            'radial-gradient(ellipse 72% 42% at 50% 22%, rgba(0,0,0,0.42) 0%, transparent 68%), linear-gradient(to bottom, rgba(11,11,11,0.35) 0%, transparent 22%, transparent 72%, rgba(11,11,11,0.18) 100%)',
                     }}
                 />
 
-                {/* Cloudy bottom veil — soft merge into next section */}
+                {/* Soft bottom blend into next section */}
                 <div
-                    className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-[12vh] min-h-[60px]"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-[6vh] min-h-[30px]"
                     aria-hidden
                     style={{
-                        background: 'linear-gradient(to bottom, transparent 0%, rgba(11,11,11,0.4) 60%, #0B0B0B 100%)',
+                        background:
+                            'linear-gradient(to bottom, transparent 0%, rgba(11,11,11,0.05) 80%, #0B0B0B 100%)',
                     }}
                 />
             </div>
 
-            <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-screen-2xl flex-col justify-start pt-[calc(7.5rem+env(safe-area-inset-top,0px))] pb-8 sm:pt-[calc(8.5rem+env(safe-area-inset-top,0px))] md:pt-[calc(9.5rem+env(safe-area-inset-top,0px))] lg:pt-[10vh] xl:pt-[12vh] lg:pb-10">
+            {/* Headline — centered in the sky area above products */}
+            <div
+                className="pointer-events-none absolute inset-x-0 z-10 flex items-center justify-center px-4 sm:px-6"
+                style={{
+                    top: 'calc(7.25rem + env(safe-area-inset-top, 0px))',
+                    height: 'clamp(11rem, 28vh, 22rem)',
+                }}
+            >
                 <div
-                    className="flex animate-fade-in-up flex-col items-center px-4 text-center"
+                    className="animate-fade-in-up mx-auto w-full max-w-[min(100%,42rem)] text-center sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl"
                     style={{ animationDuration: '1.2s' }}
                 >
-                    <h1 className="flex flex-col items-center justify-center font-['Cormorant_Garamond',serif] tracking-tight text-[#FAF6ED] drop-shadow-2xl">
-                        <span className="mb-0 block text-[1.75rem] font-semibold tracking-wide opacity-95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)] sm:text-3xl md:text-3xl lg:text-[2rem]">
+                    <h1 className="flex flex-col items-center gap-1 font-['Cormorant_Garamond',serif] tracking-tight text-[#FAF6ED] text-balance sm:gap-1.5 md:gap-2">
+                        <span
+                            className="block font-semibold tracking-wide opacity-95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+                            style={line1Style}
+                        >
                             Elevating Your Daily Rituals for
                         </span>
-                        <span className="-mt-1 block text-[3.5rem] font-bold italic leading-[0.9] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] sm:-mt-2 sm:text-6xl md:-mt-3 md:text-7xl lg:-mt-4 lg:text-[6.5rem]">
+                        <span
+                            className="block font-bold italic leading-[1.05] drop-shadow-[0_4px_18px_rgba(0,0,0,0.85)]"
+                            style={line2Style}
+                        >
                             Ultimate Well-Being
                         </span>
                     </h1>
