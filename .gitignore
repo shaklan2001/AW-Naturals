@@ -1,0 +1,74 @@
+# ================================
+# AW Naturals - Root .gitignore
+# ================================
+
+# ── Dependencies ──────────────────
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ── Build Outputs ─────────────────
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+
+# ── Environment Variables ─────────
+.env
+.env.local
+.env.staging
+.env.test
+!.env.example
+
+# ── Logs ─────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── OS / System ───────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── IDE / Editor ──────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── TypeScript ────────────────────
+*.tsbuildinfo
+
+# ── Testing ───────────────────────
+coverage/
+.nyc_output/
+
+# ── Misc Temporary ────────────────
+tmp/
+tmp_react_bits/
+*.tmp
+*.bak
+*.swp
+
+# ── Prisma ────────────────────────
+# Keep migrations, ignore generated client
+backend/node_modules/
+
+# ── Package Manager Locks ─────────
+# Keep lock files for reproducibility
+# (do NOT ignore package-lock.json or yarn.lock)
+
+# ── Docker ────────────────────────
+# docker-compose.override.yml
+
+# ── Vite ──────────────────────────
+*.local
