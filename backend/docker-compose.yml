@@ -1,0 +1,33 @@
+# PostgreSQL for local dev. Port 5432 — stop other Postgres containers first.
+#
+# Volume `postgres_data`: if you created it with `docker run -v postgres_data:...`, mark it
+# `external: true` below so Compose does not try to own/replace it (removes the warning).
+# First-time only (no volume yet): run `docker volume create postgres_data` before `compose up`.
+#
+# If `docker compose pull` fails with proxy timeout (e.g. 192.168.65.1:3128): Docker Desktop →
+# Settings → Resources → Proxies — disable or fix; or fix HTTP_PROXY/HTTPS_PROXY in shell.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres-local
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: mydb
+    # Host 5433 avoids macOS/other Postgres already bound to localhost:5432 (Prisma P1010 / wrong cluster).
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d mydb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+    name: postgres_data
+    external: true
