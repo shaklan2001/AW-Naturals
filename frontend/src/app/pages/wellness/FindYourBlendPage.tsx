@@ -7,6 +7,7 @@ import { useStorefrontProducts } from '../../hooks/use-storefront-queries';
 import { toCartProduct } from '../products/components/productListUtils';
 import { ImageWithFallback } from '@/shared/components/ImageWithFallback';
 import { ProductsAmbientBackground } from '../products/components/ProductsAmbientBackground';
+import { cn } from '../../components/ui/utils';
 import {
     DOCTOR_CHOICE_LINE,
     QUIZ_HEADLINE,
@@ -190,15 +191,21 @@ export function FindYourBlendPage() {
 
             {/* Assessment Consultation Workspace */}
             <div className="relative z-10 flex flex-col justify-center flex-grow">
-                <div className="mx-auto w-full max-w-2xl px-4 md:max-w-3xl md:px-6">
+                <div className={cn(
+                    "mx-auto w-full px-4 md:px-6 transition-all duration-500",
+                    phase === 'intro' ? "max-w-4xl lg:max-w-5xl" : "max-w-2xl md:max-w-3xl"
+                )}>
                 
                 {/* Glowing Brand Eyebrow */}
-                <div className="mb-4 flex items-center justify-center gap-2">
+                <div className={cn(
+                    "mb-6 flex items-center gap-2",
+                    phase === 'intro' ? "justify-start" : "justify-center"
+                )}>
                     <span className="h-[1px] w-6 bg-[#D4AF37]/30" />
                     <p className="font-['Inter'] text-[10px] font-bold uppercase tracking-[0.3em] text-[#C6A85B] md:text-[11px]">
                         AW Naturals Wellness Assessment
                     </p>
-                    <span className="h-[1px] w-6 bg-[#D4AF37]/30" />
+                    {phase !== 'intro' && <span className="h-[1px] w-6 bg-[#D4AF37]/30" />}
                 </div>
 
                 <AnimatePresence mode="wait">
@@ -210,57 +217,69 @@ export function FindYourBlendPage() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -15 }}
                             transition={{ duration: 0.4, ease: 'easeOut' }}
-                            className="text-center"
+                            className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center text-left"
                         >
-                            <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(2.15rem,5.5vw,3.25rem)] leading-[1.1] tracking-tight text-[#F5F5DC] mb-6">
-                                Find your{' '}
-                                <span className="bg-gradient-to-r from-[#D4AF37] via-[#F5F5DC] to-[#D4AF37] bg-clip-text text-transparent">
-                                    blend
-                                </span>
-                            </h1>
-                            
-                            {/* Glassmorphic Description Card */}
-                            <div className="mx-auto max-w-xl rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                                <p className="font-['Inter'] text-[16px] font-medium leading-relaxed text-[#F5F5DC] mb-4">
-                                    {QUIZ_HEADLINE}
-                                </p>
-                                <p className="font-['Inter'] text-[14px] font-light leading-relaxed text-white/60">
-                                    Take our short diagnostic to discover your unique wellness profile. Guided by clinical Ayurvedic science, we will formulate the precise natural botanicals recommended for your vitality, sleep, or metabolism.
-                                </p>
-                            </div>
-
-                            {/* Luxury Call-To-Action Button */}
-                            <div className="mt-10">
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        setPhase('quiz');
-                                        setStepIndex(0);
-                                    }}
-                                    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-12 py-4.5 font-['Inter'] text-[12px] font-bold uppercase tracking-[0.2em] text-[#0B0B0B] transition-all hover:scale-[1.03] active:scale-95 shadow-[0_12px_40px_rgba(212,175,55,0.22)]"
-                                    style={{
-                                        background: 'linear-gradient(135deg, #D4AF37 0%, #f0d060 55%, #c8a84b 100%)',
-                                    }}
-                                >
-                                    {/* Pulse effect */}
-                                    <span className="absolute inset-0 w-full h-full bg-white/20 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
-                                    
-                                    <span className="relative z-10 flex items-center gap-2">
-                                        Start Consultation
-                                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+                            <div className="md:col-span-7 flex flex-col items-start">
+                                <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(2.5rem,6vw,4.25rem)] leading-[1.1] tracking-tight text-[#F5F5DC] mb-6">
+                                    Find your{' '}
+                                    <span className="bg-gradient-to-r from-[#D4AF37] via-[#F5F5DC] to-[#D4AF37] bg-clip-text text-transparent">
+                                        blend
                                     </span>
-                                </button>
+                                </h1>
+                                
+                                {/* Glassmorphic Description Card */}
+                                <div className="w-full rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                                    <p className="font-['Inter'] text-[16px] font-medium leading-relaxed text-[#F5F5DC] mb-4">
+                                        {QUIZ_HEADLINE}
+                                    </p>
+                                    <p className="font-['Inter'] text-[14px] font-light leading-relaxed text-white/60">
+                                        Take our short diagnostic to discover your unique wellness profile. Guided by clinical Ayurvedic science, we will formulate the precise natural botanicals recommended for your vitality, sleep, or metabolism.
+                                    </p>
+                                </div>
+
+                                {/* Luxury Call-To-Action Button */}
+                                <div className="mt-8">
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            setPhase('quiz');
+                                            setStepIndex(0);
+                                        }}
+                                        className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-12 py-4.5 font-['Inter'] text-[12px] font-bold uppercase tracking-[0.2em] text-[#0B0B0B] transition-all hover:scale-[1.03] active:scale-95 shadow-[0_12px_40px_rgba(212,175,55,0.22)]"
+                                        style={{
+                                            background: 'linear-gradient(135deg, #D4AF37 0%, #f0d060 55%, #c8a84b 100%)',
+                                        }}
+                                    >
+                                        {/* Pulse effect */}
+                                        <span className="absolute inset-0 w-full h-full bg-white/20 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
+                                        
+                                        <span className="relative z-10 flex items-center gap-2">
+                                            Start Consultation
+                                            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <p className="mt-8 font-['Inter'] text-[12px] text-white/35">
+                                    Prefer to browse our clinic shelves directly?{' '}
+                                    <Link
+                                        to="/products"
+                                        className="text-[#D4AF37] font-semibold underline-offset-4 hover:text-[#E5D08A] hover:underline transition-colors"
+                                    >
+                                        Shop all products
+                                    </Link>
+                                </p>
                             </div>
 
-                            <p className="mt-8 font-['Inter'] text-[12px] text-white/35">
-                                Prefer to browse our clinic shelves directly?{' '}
-                                <Link
-                                    to="/products"
-                                    className="text-[#D4AF37] font-semibold underline-offset-4 hover:text-[#E5D08A] hover:underline transition-colors"
-                                >
-                                    Shop all products
-                                </Link>
-                            </p>
+                            <div className="md:col-span-5 flex justify-center w-full">
+                                <div className="relative w-full max-w-[360px] aspect-[9/16] rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                                    <ImageWithFallback
+                                        src="/assets/confuse.webp"
+                                        alt="Choose your blend illustration"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
                         </motion.div>
                     )}
 
