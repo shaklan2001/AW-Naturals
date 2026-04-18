@@ -26,6 +26,7 @@ export function ProductDetailPage() {
         name: apiProduct.name,
         shortDescription: apiProduct.shortDescription,
         benefit: apiProduct.benefit,
+        category: apiProduct.category,
         description: apiProduct.description,
         price: apiProduct.price,
         image: apiProduct.image,

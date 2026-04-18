@@ -51,9 +51,11 @@ export function ProductListRow({ product, index, quantityInCart, onAddToCart, on
 
             <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-10 flex flex-col justify-center relative z-10 text-[#0B0B0B]">
                 <div className="mb-2 flex flex-wrap items-center gap-2">
+                    {(product.benefit || product.category) && (
                     <span className="text-[10px] font-['Inter'] text-[#8B6B22] uppercase tracking-[0.2em] font-bold">
-                        {product.benefit}
+                        {product.benefit || product.category}
                     </span>
+                    )}
                     {isUpcoming && (
                         <span className="rounded-full border border-[#8B6B22]/40 bg-[#8B6B22]/15 px-2.5 py-0.5 font-['Inter'] text-[9px] font-bold uppercase tracking-[0.15em] text-[#5a3e00]">
                             Upcoming
@@ -73,11 +75,8 @@ export function ProductListRow({ product, index, quantityInCart, onAddToCart, on
 
                 <div className="flex items-end justify-between mb-6 pb-6 md:mb-8 md:pb-8 border-b border-black/10">
                     <div>
-                        <div className="font-['Playfair_Display'] text-[36px] sm:text-[40px] font-bold tracking-tight text-[#0B0B0B] leading-none mb-1">
+                        <div className="font-['Inter'] text-[36px] sm:text-[40px] font-bold tabular-nums tracking-tight text-[#0B0B0B] leading-none">
                             ₹{product.price}
-                        </div>
-                        <div className="font-['Inter'] text-[11px] font-bold text-[#666] tracking-[0.15em] uppercase">
-                            Standard Pack
                         </div>
                     </div>
                     <Link

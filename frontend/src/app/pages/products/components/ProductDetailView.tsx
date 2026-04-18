@@ -6,8 +6,6 @@ import { ImageWithFallback } from '@/shared/components/ImageWithFallback';
 import type { Product } from '../../../context/CartContext';
 import type { StorefrontProduct } from '../../../api/public-api';
 import { useCart } from '../../../context/CartContext';
-import { getProductDetailExtra } from './productDetailConstants';
-import type { ProductDetailExtra } from './productDetailConstants';
 import { toCartProduct } from './productListUtils';
 
 /** Small card used in the "More Formulations" grid — qty reads/writes global cart */
@@ -146,12 +144,11 @@ export function ProductDetailView({
     updateQuantity,
     onAddToCart,
 }: ProductDetailViewProps) {
-    const fallback: ProductDetailExtra = getProductDetailExtra(product.id);
-    const useApiPointers = !!(product.keyBenefitsPoints && product.keyBenefitsPoints.length > 0);
-    const benefits = useApiPointers ? product.keyBenefitsPoints! : fallback.benefits;
-    const benefitsIntro = useApiPointers ? null : fallback.benefitsDescription;
-    const useApiIngredients = !!(product.ingredientsPoints && product.ingredientsPoints.length > 0);
-    const ingredientsTags = useApiIngredients ? product.ingredientsPoints! : fallback.ingredients;
+    const benefits = product.keyBenefitsPoints ?? [];
+    const ingredientsTags = product.ingredientsPoints ?? [];
+    const benefitBadge = product.benefit?.trim() || null;
+    const categoryLabel = product.category?.trim() || null;
+    const shortDescription = product.shortDescription?.trim() || null;
     const clinicalBody =
         product.showClinicalNote && product.clinicalNote?.trim()
             ? product.clinicalNote.trim()
@@ -223,10 +220,11 @@ export function ProductDetailView({
                                 alt={product.name}
                                 className="h-full w-full object-cover"
                             />
-                            {/* benefit badge */}
-                            <div className="absolute bottom-5 left-5 rounded-full border border-[#D4AF37]/50 bg-black/50 px-4 py-1.5 font-['Inter'] text-[11px] font-semibold uppercase tracking-[0.18em] text-[#D4AF37] backdrop-blur-md">
-                                {product.benefit}
-                            </div>
+                            {benefitBadge && (
+                                <div className="absolute bottom-5 left-5 rounded-full border border-[#D4AF37]/50 bg-black/50 px-4 py-1.5 font-['Inter'] text-[11px] font-semibold uppercase tracking-[0.18em] text-[#D4AF37] backdrop-blur-md">
+                                    {benefitBadge}
+                                </div>
+                            )}
                         </div>
                     </motion.div>
 
@@ -239,24 +237,30 @@ export function ProductDetailView({
                     >
                         {/* Title + description */}
                         <div>
-                            <p className="mb-3 font-['Inter'] text-[11px] font-semibold uppercase tracking-[0.3em] text-[#D4AF37]/70">
-                                AW Naturals
-                            </p>
+                            {categoryLabel && (
+                                <p className="mb-3 font-['Inter'] text-[11px] font-semibold uppercase tracking-[0.3em] text-[#D4AF37]/70">
+                                    {categoryLabel}
+                                </p>
+                            )}
                             <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-wide text-[#F5F5DC]">
                                 {product.name}
                             </h1>
-                            <p className="mt-4 font-['Inter'] text-base font-light leading-relaxed text-[#F5F5DC]/65">
-                                {product.description}
-                            </p>
+                            {shortDescription && shortDescription !== product.description.trim() && (
+                                <p className="mt-4 font-['Inter'] text-base font-light leading-relaxed text-[#F5F5DC]/80">
+                                    {shortDescription}
+                                </p>
+                            )}
+                            {product.description?.trim() && (
+                                <p className={`font-['Inter'] text-base font-light leading-relaxed text-[#F5F5DC]/65 ${shortDescription && shortDescription !== product.description.trim() ? 'mt-3' : 'mt-4'}`}>
+                                    {product.description}
+                                </p>
+                            )}
                         </div>
 
                         {/* Price */}
-                        <div className="flex items-baseline gap-4 border-b border-white/[0.06] pb-6">
-                            <span className="font-['Cormorant_Garamond',serif] font-semibold text-[3rem] leading-none text-[#D4AF37]">
+                        <div className="border-b border-white/[0.06] pb-6">
+                            <span className="font-['Inter'] text-[3rem] font-semibold tabular-nums leading-none text-[#D4AF37]">
                                 ₹{product.price}
-                            </span>
-                            <span className="font-['Inter'] text-sm font-light text-[#F5F5DC]/50">
-                                30-day supply
                             </span>
                         </div>
 
@@ -332,7 +336,8 @@ export function ProductDetailView({
                             </AnimatePresence>
                         </div>
 
-                        {/* ── CREAM Details Card – Key Benefits ── */}
+                        {/* ── Key Benefits — only when set in admin ── */}
+                        {benefits.length > 0 && (
                         <div
                             className="rounded-[20px] p-7"
                             style={{
@@ -344,11 +349,6 @@ export function ProductDetailView({
                             <h2 className="mb-3 font-['Cormorant_Garamond',serif] text-[22px] font-bold tracking-wide text-[#141210]">
                                 Key Benefits
                             </h2>
-                            {benefitsIntro && (
-                                <p className="mb-5 font-['Inter'] text-[13px] font-light leading-relaxed text-[#1a1608]/60">
-                                    {benefitsIntro}
-                                </p>
-                            )}
                             <ul className="grid grid-cols-1 gap-3">
                                 {benefits.map((benefit, i) => (
                                     <li key={i} className="flex items-center gap-3">
@@ -362,8 +362,9 @@ export function ProductDetailView({
                                 ))}
                             </ul>
                         </div>
+                        )}
 
-                        {/* ── Premium ingredients (tags) — hidden if no lines in admin and no legacy fallback ── */}
+                        {/* ── Premium ingredients (tags) — only when set in admin ── */}
                         {ingredientsTags.length > 0 && (
                             <div
                                 className="rounded-[20px] p-7"
