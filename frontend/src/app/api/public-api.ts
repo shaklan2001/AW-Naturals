@@ -1,12 +1,13 @@
 import { getApiBaseUrl } from "./config";
 import { getCustomerAccessToken } from "./customer-session";
+import { getUserFacingErrorMessage } from "./api-error";
 
 async function parseJson<T>(res: Response): Promise<T> {
   const text = await res.text();
   const data = text ? (JSON.parse(text) as unknown) : null;
   if (!res.ok) {
     const err = data as { error?: string } | null;
-    throw new Error(err?.error ?? res.statusText);
+    throw new Error(getUserFacingErrorMessage(err?.error ?? res.statusText));
   }
   return data as T;
 }
