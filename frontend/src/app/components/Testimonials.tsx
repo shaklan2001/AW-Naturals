@@ -2,6 +2,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import { motion, useMotionValue, animate } from 'motion/react';
 import { ChevronLeft, ChevronRight, Quote, Loader2 } from 'lucide-react';
 import { usePublishedTestimonials } from '../hooks/use-storefront-queries';
+import { getUserFacingErrorMessage } from '../api/api-error';
 
 const GAP_PX = 32;
 
@@ -175,7 +176,12 @@ export function Testimonials() {
         return (
             <section className="relative overflow-hidden bg-[#0B0B0B] py-24">
                 <div className="relative z-10 mx-auto max-w-lg px-6 text-center">
-                    <p className="text-sm text-red-300/90">{error?.message ?? 'Could not load testimonials.'}</p>
+                    <p className="font-['Inter'] text-sm text-[#F5F5DC]/70">
+                        {getUserFacingErrorMessage(error?.message)}
+                    </p>
+                    <p className="mt-2 font-['Inter'] text-xs text-[#F5F5DC]/45">
+                        Testimonials are temporarily unavailable.
+                    </p>
                     <button
                         type="button"
                         onClick={() => void refetch()}
