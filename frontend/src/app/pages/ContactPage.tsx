@@ -126,7 +126,7 @@ export function ContactPage() {
                         {
                             icon: <MapPin className="h-6 w-6" />,
                             label: 'Our Studio',
-                            value: 'Mumbai, Maharashtra',
+                            value: 'Aayurshala Wellness Pvt Ltd, Jalvayu Vihar, Jhajra, Dehradun, UK - 248007',
                             href: undefined,
                         },
                     ].map(({ icon, label, value, href }) => {

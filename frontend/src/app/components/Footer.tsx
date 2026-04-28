@@ -137,9 +137,11 @@ export function Footer() {
                                 <div className="space-y-1">
                                     <p className="text-[10px] font-bold uppercase tracking-widest text-white/30">HQ</p>
                                     <p className="leading-relaxed">
-                                        Wellness Ave, Suite 400
+                                        Aayurshala Wellness Pvt Ltd
                                         <br />
-                                        Mumbai, MH 400001
+                                        Jalvayu Vihar, Jhajra
+                                        <br />
+                                        Dehradun, UK - 248007
                                     </p>
                                 </div>
                             </div>
