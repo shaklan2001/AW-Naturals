@@ -108,13 +108,13 @@ export function ExpertiseSection() {
               <div className="absolute top-0 left-0 w-[2px] h-full bg-gradient-to-b from-[#D4AF37] via-[#D4AF37]/50 to-transparent" />
               
               <p className="font-['Gloock'] text-white/90 text-[22px] md:text-[24px] mb-8 italic leading-[1.4] relative z-10">
-                "True wellness is found at the intersection of ancient botanical knowledge and rigorous modern scientific validation."
+                "True well-being is not passive healing—it is an intentional architecture designed at the intersection of time-tested botanical knowledge and rigorous scientific validation."
               </p>
               
               <div className="flex items-center gap-6 relative z-10 translate-y-1">
                 <div className="h-px w-12 bg-gradient-to-r from-[#D4AF37] to-transparent" />
                 <span className="font-['Inter'] text-[#D4AF37] text-[12px] tracking-[0.3em] uppercase font-bold">
-                  Dr. Arvind & Dr. Wendy
+                  — Dr. Neil Rasal, MD (Ayurveda)
                 </span>
               </div>
               
