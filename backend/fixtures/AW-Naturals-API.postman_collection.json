@@ -1,0 +1,254 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-awnaturals-api",
+    "name": "AW Naturals API",
+    "description": "Import THIS file in Postman — NOT all-apis-and-database.json (that file is for Prisma DB import only).\n\n1. Import: File → Import → select this file.\n2. Collection variables: baseUrl = http://localhost:4000, accessToken = your Auth0 access token (admin requests only).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:4000" },
+    { "key": "accessToken", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Public (frontend — no auth)",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/health",
+            "description": "No Authorization header."
+          }
+        },
+        {
+          "name": "List products (active only)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/products"
+          }
+        },
+        {
+          "name": "Get product by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/products/play-prod-wheatgrass"
+          }
+        },
+        {
+          "name": "List published blogs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/blogs"
+          }
+        },
+        {
+          "name": "Get blog by slug",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/blogs/slug/gut-health-herbal-bitters"
+          }
+        },
+        {
+          "name": "Create order (checkout)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerName\": \"JSON Tester\",\n  \"email\": \"tester@example.com\",\n  \"phone\": \"9998887776\",\n  \"address\": \"99 Test Road\",\n  \"city\": \"Hyderabad\",\n  \"pincode\": \"500001\",\n  \"paymentMethod\": \"UPI\",\n  \"items\": [\n    { \"productId\": \"play-prod-turmeric\", \"quantity\": 1 }\n  ]\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/api/v1/orders"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin (Auth0 Bearer)",
+      "item": [
+        {
+          "name": "Dashboard stats",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" }
+            ],
+            "url": "{{baseUrl}}/api/v1/admin/dashboard/stats"
+          }
+        },
+        {
+          "name": "List products",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" }
+            ],
+            "url": "{{baseUrl}}/api/v1/admin/products"
+          }
+        },
+        {
+          "name": "Get product (admin)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" }
+            ],
+            "url": "{{baseUrl}}/api/v1/admin/products/play-prod-draft"
+          }
+        },
+        {
+          "name": "Create product",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Postman Test Product\",\n  \"description\": \"At least ten chars for validation rules in the API.\",\n  \"benefit\": \"Wellness\",\n  \"price\": 24.99,\n  \"category\": \"Tea\",\n  \"stock\": 50,\n  \"status\": \"draft\",\n  \"images\": [\"https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400\"]\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/api/v1/admin/products"
+          }
+        },
+        {
+          "name": "Patch product",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"stock\": 5,\n  \"status\": \"draft\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/api/v1/admin/products/play-prod-draft"
+          }
+        },
+        {
+          "name": "List orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" }
+            ],
+            "url": "{{baseUrl}}/api/v1/admin/orders"
+          }
+        },
+        {
+          "name": "Get order",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" }
+            ],
+            "url": "{{baseUrl}}/api/v1/admin/orders/ORD-PLAY-1001"
+          }
+        },
+        {
+          "name": "Patch order status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"shipped\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/api/v1/admin/orders/ORD-PLAY-1003/status"
+          }
+        },
+        {
+          "name": "List blogs",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" }
+            ],
+            "url": "{{baseUrl}}/api/v1/admin/blogs"
+          }
+        },
+        {
+          "name": "Get blog",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" }
+            ],
+            "url": "{{baseUrl}}/api/v1/admin/blogs/play-blog-gut"
+          }
+        },
+        {
+          "name": "Create blog",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Postman Blog\",\n  \"slug\": \"postman-blog-sample\",\n  \"author\": \"Admin\",\n  \"category\": \"QA\",\n  \"coverImage\": \"https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800\",\n  \"content\": \"<p>From Postman.</p>\",\n  \"seoTitle\": \"Postman\",\n  \"seoDescription\": \"Test\",\n  \"status\": \"draft\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/api/v1/admin/blogs"
+          }
+        },
+        {
+          "name": "Patch blog",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"published\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/api/v1/admin/blogs/play-blog-draft"
+          }
+        },
+        {
+          "name": "Get site settings",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" }
+            ],
+            "url": "{{baseUrl}}/api/v1/admin/settings/site"
+          }
+        },
+        {
+          "name": "Patch site settings",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}", "type": "text" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tagline\": \"Updated from Postman\",\n  \"socialLinks\": {\n    \"youtube\": \"https://youtube.com/@awnaturals\"\n  }\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/api/v1/admin/settings/site"
+          }
+        }
+      ]
+    }
+  ]
+}

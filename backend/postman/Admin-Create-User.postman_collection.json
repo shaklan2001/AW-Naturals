@@ -1,0 +1,77 @@
+{
+  "info": {
+    "name": "AW Naturals — Auth (admin API + customer website)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Admin (API only)",
+      "item": [
+        {
+          "name": "Create admin user",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              {
+                "key": "X-Admin-Setup-Key",
+                "value": "{{admin_setup_key}}",
+                "description": "Must match ADMIN_USER_SETUP_KEY (dev default: postman-admin-user-setup-key)"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Jane Admin\",\n  \"email\": \"jane@example.com\",\n  \"password\": \"your-secure-password\"\n}"
+            },
+            "url": "{{api_base}}/api/v1/auth/admin/register"
+          }
+        },
+        {
+          "name": "Admin login",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"jane@example.com\",\n  \"password\": \"your-secure-password\"\n}"
+            },
+            "url": "{{api_base}}/api/v1/auth/admin/login"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Customer (website; public API)",
+      "item": [
+        {
+          "name": "Customer sign up",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rahul Kumar\",\n  \"email\": \"rahul@example.com\",\n  \"password\": \"your-secure-password\"\n}"
+            },
+            "url": "{{api_base}}/api/v1/auth/customer/register"
+          }
+        },
+        {
+          "name": "Customer login",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"rahul@example.com\",\n  \"password\": \"your-secure-password\"\n}"
+            },
+            "url": "{{api_base}}/api/v1/auth/customer/login"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "api_base", "value": "http://localhost:4000" },
+    { "key": "admin_setup_key", "value": "postman-admin-user-setup-key" }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "_meta": {
+    "lang": "hi-en",
+    "summary": "Ek hi file: (1) database = PostgreSQL sample data — Prisma script se load hota hai, pgAdmin direct JSON import nahi. (2) apis = frontend (public) + admin — har endpoint ka method, path, headers, example body.",
+    "postgresImport": "npx tsx scripts/import-fixtures-from-json.ts fixtures/all-apis-and-database.json --wipe",
+    "postmanImport": "Postman me sirf fixtures/AW-Naturals-API.postman_collection.json import karo — yeh file Postman format nahi hai.",
+    "baseUrl": "http://localhost:4000",
+    "adminAuth": "Har admin request par header: Authorization: Bearer <AUTH0_ACCESS_TOKEN> (audience = AUTH0_AUDIENCE)",
+    "orderStatus": ["pending", "processing", "shipped", "delivered", "cancelled"],
+    "productStatus": ["active", "draft", "archived"],
+    "blogStatus": ["published", "draft"]
+  },
+  "database": {
+    "siteSettings": {
+      "id": "default",
+      "siteName": "AW Naturals (Playground)",
+      "siteUrl": "http://localhost:5173",
+      "logo": "",
+      "tagline": "Nature's Best — dev dataset",
+      "socialLinks": {
+        "instagram": "https://instagram.com/example",
+        "facebook": "https://facebook.com/example",
+        "twitter": "https://twitter.com/example",
+        "youtube": "https://youtube.com/example"
+      }
+    },
+    "products": [
+      {
+        "id": "play-prod-wheatgrass",
+        "name": "Organic Wheatgrass Powder",
+        "description": "Cold-processed juice powder for daily greens and alkalinity support.",
+        "benefit": "Vitality",
+        "price": 42.99,
+        "category": "Superfood",
+        "stock": 80,
+        "status": "active",
+        "images": ["https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=600"]
+      },
+      {
+        "id": "play-prod-turmeric",
+        "name": "Turmeric Curcumin Plus",
+        "description": "Standardized curcuminoids with black pepper extract for absorption.",
+        "benefit": "Recovery",
+        "price": 36.5,
+        "category": "Supplement",
+        "stock": 120,
+        "status": "active",
+        "images": ["https://images.unsplash.com/photo-1615485290382-441e4d049c5c?w=600"]
+      },
+      {
+        "id": "play-prod-sleep",
+        "name": "Night Herbal Complex",
+        "description": "Valerian, passionflower, and chamomile for wind-down rituals.",
+        "benefit": "Sleep",
+        "price": 29,
+        "category": "Herbal",
+        "stock": 3,
+        "status": "active",
+        "images": ["https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600"]
+      },
+      {
+        "id": "play-prod-draft",
+        "name": "Upcoming Lion's Mane Tincture",
+        "description": "Experimental formulation — not for sale yet.",
+        "benefit": "Focus",
+        "price": 55,
+        "category": "Nootropic",
+        "stock": 0,
+        "status": "draft",
+        "images": []
+      }
+    ],
+    "blogs": [
+      {
+        "id": "play-blog-gut",
+        "title": "Gut Health and Herbal bitters",
+        "slug": "gut-health-herbal-bitters",
+        "author": "Dr. Ananya Iyer",
+        "category": "Digestion",
+        "coverImage": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=1200",
+        "content": "<h2>Why bitters matter</h2><p>Bitter herbs can prime digestive enzymes before meals...</p>",
+        "seoTitle": "Gut Health and Herbal Bitters | AW Naturals",
+        "seoDescription": "How bitter herbs support digestion and mindful eating.",
+        "status": "published"
+      },
+      {
+        "id": "play-blog-draft",
+        "title": "Draft: Seasonal detox myths",
+        "slug": "seasonal-detox-myths-draft",
+        "author": "Editorial",
+        "category": "Mythbusting",
+        "coverImage": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=1200",
+        "content": "<p>Draft content — publish via PATCH admin/blogs/:id.</p>",
+        "seoTitle": "Detox myths",
+        "seoDescription": "Draft",
+        "status": "draft"
+      }
+    ],
+    "orders": [
+      {
+        "orderNumber": "ORD-PLAY-1001",
+        "customerName": "Meera Nair",
+        "email": "meera.playground@example.com",
+        "phone": "9800000001",
+        "address": "221B Baker Street",
+        "city": "Mumbai",
+        "pincode": "400001",
+        "status": "delivered",
+        "paymentMethod": "UPI",
+        "items": [
+          {
+            "productId": "play-prod-wheatgrass",
+            "productName": "Organic Wheatgrass Powder",
+            "quantity": 2,
+            "price": 42.99
+          }
+        ]
+      },
+      {
+        "orderNumber": "ORD-PLAY-1002",
+        "customerName": "Arjun Verma",
+        "email": "arjun.playground@example.com",
+        "phone": "9800000002",
+        "address": "99 Park Avenue",
+        "city": "Delhi",
+        "pincode": "110001",
+        "status": "processing",
+        "paymentMethod": "Card",
+        "items": [
+          {
+            "productId": "play-prod-turmeric",
+            "productName": "Turmeric Curcumin Plus",
+            "quantity": 1,
+            "price": 36.5
+          },
+          {
+            "productId": "play-prod-sleep",
+            "productName": "Night Herbal Complex",
+            "quantity": 2,
+            "price": 29
+          }
+        ]
+      },
+      {
+        "orderNumber": "ORD-PLAY-1003",
+        "customerName": "Sara Khan",
+        "email": "sara.playground@example.com",
+        "phone": "9800000003",
+        "address": "12 MG Road",
+        "city": "Bengaluru",
+        "pincode": "560001",
+        "status": "pending",
+        "paymentMethod": "COD",
+        "items": [
+          {
+            "productId": "play-prod-sleep",
+            "productName": "Night Herbal Complex",
+            "quantity": 1,
+            "price": 29
+          }
+        ]
+      }
+    ]
+  },
+  "apis": {
+    "frontend": [
+      {
+        "name": "Health",
+        "description": "Public — koi auth nahi",
+        "method": "GET",
+        "path": "/api/v1/health",
+        "requiresAuth": false,
+        "headers": {},
+        "body": null
+      },
+      {
+        "name": "List products (sirf active)",
+        "method": "GET",
+        "path": "/api/v1/products",
+        "requiresAuth": false,
+        "headers": {},
+        "body": null
+      },
+      {
+        "name": "Get product by id",
+        "method": "GET",
+        "path": "/api/v1/products/play-prod-wheatgrass",
+        "requiresAuth": false,
+        "headers": {},
+        "body": null
+      },
+      {
+        "name": "List blogs (sirf published)",
+        "method": "GET",
+        "path": "/api/v1/blogs",
+        "requiresAuth": false,
+        "headers": {},
+        "body": null
+      },
+      {
+        "name": "Get blog by slug",
+        "method": "GET",
+        "path": "/api/v1/blogs/slug/gut-health-herbal-bitters",
+        "requiresAuth": false,
+        "headers": {},
+        "body": null
+      },
+      {
+        "name": "Create order (checkout)",
+        "method": "POST",
+        "path": "/api/v1/orders",
+        "requiresAuth": false,
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "customerName": "JSON Tester",
+          "email": "tester@example.com",
+          "phone": "9998887776",
+          "address": "99 Test Road",
+          "city": "Hyderabad",
+          "pincode": "500001",
+          "paymentMethod": "UPI",
+          "items": [{ "productId": "play-prod-turmeric", "quantity": 1 }]
+        }
+      }
+    ],
+    "admin": [
+      {
+        "name": "Dashboard stats",
+        "method": "GET",
+        "path": "/api/v1/admin/dashboard/stats",
+        "requiresAuth": true,
+        "headers": {
+          "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>",
+          "Content-Type": "application/json"
+        },
+        "body": null
+      },
+      {
+        "name": "List products (sab status)",
+        "method": "GET",
+        "path": "/api/v1/admin/products",
+        "requiresAuth": true,
+        "headers": { "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>" },
+        "body": null
+      },
+      {
+        "name": "Get product by id (admin)",
+        "method": "GET",
+        "path": "/api/v1/admin/products/play-prod-draft",
+        "requiresAuth": true,
+        "headers": { "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>" },
+        "body": null
+      },
+      {
+        "name": "Create product",
+        "method": "POST",
+        "path": "/api/v1/admin/products",
+        "requiresAuth": true,
+        "headers": {
+          "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "name": "From JSON Master File",
+          "description": "Admin API test product — long enough description text.",
+          "benefit": "Wellness",
+          "price": 24.99,
+          "category": "Tea",
+          "stock": 50,
+          "status": "draft",
+          "images": ["https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400"]
+        }
+      },
+      {
+        "name": "Update product (partial)",
+        "method": "PATCH",
+        "path": "/api/v1/admin/products/play-prod-draft",
+        "requiresAuth": true,
+        "headers": {
+          "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>",
+          "Content-Type": "application/json"
+        },
+        "body": { "stock": 5, "status": "draft" }
+      },
+      {
+        "name": "Delete product",
+        "method": "DELETE",
+        "path": "/api/v1/admin/products/REPLACE_WITH_NEW_PRODUCT_ID_AFTER_POST",
+        "requiresAuth": true,
+        "headers": { "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>" },
+        "body": null,
+        "note": "POST create ke baad response me `id` use karo; kisi product par orders na hon"
+      },
+      {
+        "name": "List orders",
+        "method": "GET",
+        "path": "/api/v1/admin/orders",
+        "requiresAuth": true,
+        "headers": { "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>" },
+        "body": null
+      },
+      {
+        "name": "Get order by id ya orderNumber",
+        "method": "GET",
+        "path": "/api/v1/admin/orders/ORD-PLAY-1001",
+        "requiresAuth": true,
+        "headers": { "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>" },
+        "body": null
+      },
+      {
+        "name": "Update order status",
+        "method": "PATCH",
+        "path": "/api/v1/admin/orders/ORD-PLAY-1003/status",
+        "requiresAuth": true,
+        "headers": {
+          "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>",
+          "Content-Type": "application/json"
+        },
+        "body": { "status": "shipped" }
+      },
+      {
+        "name": "List blogs (draft + published)",
+        "method": "GET",
+        "path": "/api/v1/admin/blogs",
+        "requiresAuth": true,
+        "headers": { "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>" },
+        "body": null
+      },
+      {
+        "name": "Get blog by id",
+        "method": "GET",
+        "path": "/api/v1/admin/blogs/play-blog-gut",
+        "requiresAuth": true,
+        "headers": { "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>" },
+        "body": null
+      },
+      {
+        "name": "Create blog",
+        "method": "POST",
+        "path": "/api/v1/admin/blogs",
+        "requiresAuth": true,
+        "headers": {
+          "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "title": "Master JSON Se Blog",
+          "slug": "master-json-se-blog",
+          "author": "Admin",
+          "category": "QA",
+          "coverImage": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800",
+          "content": "<p>Hindi/English ek file.</p>",
+          "seoTitle": "Master JSON",
+          "seoDescription": "Test",
+          "status": "draft"
+        }
+      },
+      {
+        "name": "Update blog (partial)",
+        "method": "PATCH",
+        "path": "/api/v1/admin/blogs/play-blog-draft",
+        "requiresAuth": true,
+        "headers": {
+          "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>",
+          "Content-Type": "application/json"
+        },
+        "body": { "status": "published" }
+      },
+      {
+        "name": "Delete blog",
+        "method": "DELETE",
+        "path": "/api/v1/admin/blogs/play-blog-draft",
+        "requiresAuth": true,
+        "headers": { "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>" },
+        "body": null,
+        "note": "Agar pehle delete kar diya to path me doosra blog id use karo"
+      },
+      {
+        "name": "Get site settings",
+        "method": "GET",
+        "path": "/api/v1/admin/settings/site",
+        "requiresAuth": true,
+        "headers": { "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>" },
+        "body": null
+      },
+      {
+        "name": "Patch site settings",
+        "method": "PATCH",
+        "path": "/api/v1/admin/settings/site",
+        "requiresAuth": true,
+        "headers": {
+          "Authorization": "Bearer <AUTH0_ACCESS_TOKEN>",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "tagline": "Updated from all-apis-and-database.json",
+          "socialLinks": { "youtube": "https://youtube.com/@awnaturals" }
+        }
+      }
+    ]
+  }
+}
