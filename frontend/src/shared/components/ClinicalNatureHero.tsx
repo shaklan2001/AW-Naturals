@@ -41,15 +41,15 @@ export function ClinicalNatureHero({
             const q = gsap.utils.selector(root);
             if (!isStory) {
                 gsap.fromTo(q('.cnh-h-line1'), { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 0.06 });
-                gsap.fromTo(q('.cnh-h-line2'), { opacity: 0, y: 16 },  { opacity: 1, y: 0, duration: 1.05, ease: 'power2.out', delay: 0.14 });
-                gsap.fromTo(q('.cnh-aside-left'),  { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.95, ease: 'power2.out', delay: 0.22 });
-                gsap.fromTo(q('.cnh-aside-right'), { opacity: 0, x: 16 },  { opacity: 1, x: 0, duration: 0.95, ease: 'power2.out', delay: 0.22 });
-                gsap.fromTo(q('.cnh-cta-wrap'),    { opacity: 0, y: 16 },  { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out', delay: 0.3 });
+                gsap.fromTo(q('.cnh-h-line2'), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1.05, ease: 'power2.out', delay: 0.14 });
+                gsap.fromTo(q('.cnh-aside-left'), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.95, ease: 'power2.out', delay: 0.22 });
+                gsap.fromTo(q('.cnh-aside-right'), { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.95, ease: 'power2.out', delay: 0.22 });
+                gsap.fromTo(q('.cnh-cta-wrap'), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out', delay: 0.3 });
             } else {
                 const eyebrow = q('.cnh-about-eyebrow');
                 if (eyebrow.length) gsap.fromTo(eyebrow, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out', delay: 0.04 });
                 gsap.fromTo(q('.cnh-story-part1'), { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 1.15, ease: 'power3.out', delay: 0.08 });
-                gsap.fromTo(q('.cnh-story-part2'), { opacity: 0, x: 60 },  { opacity: 1, x: 0, duration: 1.15, ease: 'power3.out', delay: 0.08 });
+                gsap.fromTo(q('.cnh-story-part2'), { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 1.15, ease: 'power3.out', delay: 0.08 });
                 gsap.fromTo(q('.cnh-story-tagline'), { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 1.05, ease: 'power3.out', delay: 0.32 });
             }
         }, root);
@@ -66,20 +66,18 @@ export function ClinicalNatureHero({
             data-variant={variant}
             data-content={contentMode}
             style={{ backgroundColor: blendEnd }}
-            className={`cnh-root relative z-[15] flex min-h-[100svh] w-full flex-col overflow-x-clip overflow-y-clip ${
-                isHome ? 'cnh-root--home' : ''
-            }`}
+            className={`cnh-root relative z-[15] flex min-h-[100svh] w-full flex-col overflow-x-clip overflow-y-clip ${isHome ? 'cnh-root--home' : ''
+                }`}
         >
             {/* ── BG image ── */}
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <img
                     src={bgUrl}
                     alt=""
-                    className={`absolute inset-0 h-full w-full object-cover ${
-                        isHome
-                            ? 'object-[50%_74%] sm:object-[50%_80%] lg:object-[50%_92%] xl:object-bottom'
+                    className={`absolute inset-0 h-full w-full object-cover ${isHome
+                            ? 'object-[50%_92%] sm:object-[50%_80%] lg:object-[50%_92%] xl:object-bottom'
                             : 'object-[center_70%]'
-                    }`}
+                        }`}
                 />
             </div>
 
@@ -182,7 +180,7 @@ export function ClinicalNatureHero({
                             </span>
                             <span
                                 className="cnh-h-line2 mt-1 block font-bold leading-[1.05] tracking-tight md:mt-2"
-                                style={{ fontSize: 'clamp(2.4rem,9vw,4.2rem)', textShadow: '0 4px 24px rgba(0,0,0,0.7)' }}
+                                style={{ fontSize: 'clamp(2.9rem,10.8vw,5rem)', textShadow: '0 4px 24px rgba(0,0,0,0.7)' }}
                             >
                                 Ultimate Well-Being
                             </span>

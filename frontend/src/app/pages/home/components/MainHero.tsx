@@ -3,13 +3,13 @@ import React from 'react';
 const HERO_IMAGE = '/assets/home_page.webp';
 
 const line1Style: React.CSSProperties = {
-    fontSize: 'clamp(1.18125rem, 0.9975rem + 0.945vw, 1.8375rem)',
+    fontSize: 'clamp(1rem, 0.8rem + 0.9vw, 1.8375rem)',
     lineHeight: 1.3,
     fontWeight: 600,
 };
 
 const line2Style: React.CSSProperties = {
-    fontSize: 'clamp(2.9625rem, 2.1375rem + 3.675vw, 5.775rem)',
+    fontSize: 'clamp(2.4rem, 1.7rem + 3.6vw, 6.9rem)',
     lineHeight: 1.05,
     fontWeight: 700,
 };
@@ -26,7 +26,7 @@ export function MainHero() {
                     height={941}
                     decoding="async"
                     fetchPriority="high"
-                    className="h-full w-full object-cover object-[50%_78%] sm:object-[50%_82%] lg:object-[50%_88%] xl:object-[50%_92%] 2xl:object-[50%_94%]"
+                    className="h-full w-full object-cover object-[50%_92%] sm:object-[50%_82%] lg:object-[50%_88%] xl:object-[50%_92%] 2xl:object-[50%_94%]"
                 />
 
                 {/* Headline legibility — light touch so products stay visible */}
@@ -54,8 +54,8 @@ export function MainHero() {
             <div
                 className="pointer-events-none absolute inset-x-0 z-10 flex items-center justify-center px-4 sm:px-6"
                 style={{
-                    top: 'calc(7.25rem + env(safe-area-inset-top, 0px))',
-                    height: 'clamp(11rem, 28vh, 22rem)',
+                    top: 'calc(clamp(8rem, 24vh, 16rem) + env(safe-area-inset-top, 0px))',
+                    height: 'clamp(8rem, 22vh, 22rem)',
                 }}
             >
                 <div
