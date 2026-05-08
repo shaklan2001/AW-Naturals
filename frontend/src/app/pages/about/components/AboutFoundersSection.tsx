@@ -26,8 +26,8 @@ export const AboutFoundersSection = memo(function AboutFoundersSection() {
                     </p>
                     <h2
                         id="about-founders-heading"
-                        className="mt-4 font-['Gloock'] text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-white md:mt-5 md:text-[clamp(2rem,3.5vw,3rem)]"
-                        style={{ fontWeight: 400 }}
+                        className="mt-4 font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-white md:mt-5 md:text-[clamp(2rem,3.5vw,3rem)]"
+                        style={{ fontWeight: 600 }}
                     >
                         A Legacy of <ClinicalGoldText>Clinical Excellence</ClinicalGoldText>
                     </h2>
@@ -55,8 +55,8 @@ export const AboutFoundersSection = memo(function AboutFoundersSection() {
                                         className={`text-center md:text-left ${isReversed ? 'md:order-1' : 'md:order-2'}`}
                                     >
                                         <h3
-                                            className="font-['Gloock'] text-[clamp(1.65rem,3.2vw,2.25rem)] leading-tight text-[#F5F5DC]"
-                                            style={{ fontWeight: 400 }}
+                                            className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.65rem,3.2vw,2.25rem)] leading-tight text-[#F5F5DC]"
+                                            style={{ fontWeight: 600 }}
                                         >
                                             {founder.name}
                                         </h3>

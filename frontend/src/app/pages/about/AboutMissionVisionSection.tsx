@@ -31,8 +31,8 @@ export function AboutMissionVisionSection() {
                     </p>
                     <h2
                         id="about-mission-vision-heading"
-                        className="mt-3 font-['Gloock'] text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-[#F5F5DC] md:mt-4 md:text-[clamp(2rem,3.5vw,3rem)]"
-                        style={{ fontWeight: 400 }}
+                        className="mt-3 font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-[#F5F5DC] md:mt-4 md:text-[clamp(2rem,3.5vw,3rem)]"
+                        style={{ fontWeight: 600 }}
                     >
                         Mission & Vision
                     </h2>

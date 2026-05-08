@@ -6,7 +6,7 @@ import { ClinicalGoldText } from './clinicalGoldText';
 export const AboutJourneyCtaSection = memo(function AboutJourneyCtaSection() {
     return (
         <section className="cta-section relative z-20 mx-auto flex max-w-4xl flex-col items-center bg-[#0B0B0B] px-6 py-32 pb-28 text-center md:py-40 md:pb-32">
-            <h2 className="mb-12 font-['Gloock'] text-5xl leading-tight text-[#F5F5DC] md:mb-16 md:text-7xl lg:text-8xl">
+            <h2 className="mb-12 font-['Cormorant_Garamond',serif] font-semibold text-5xl leading-tight text-[#F5F5DC] md:mb-16 md:text-7xl lg:text-8xl">
                 Your Journey To <br />
                 <ClinicalGoldText>Clinical Wellness</ClinicalGoldText>
             </h2>

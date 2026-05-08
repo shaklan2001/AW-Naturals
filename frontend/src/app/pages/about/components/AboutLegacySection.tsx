@@ -23,8 +23,8 @@ export const AboutLegacySection = memo(function AboutLegacySection() {
                             About AW Naturals
                         </p>
                         <h2
-                            className="legacy-text-element font-['Gloock'] text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-white md:text-[clamp(2rem,3.5vw,3rem)]"
-                            style={{ fontWeight: 400 }}
+                            className="legacy-text-element font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-white md:text-[clamp(2rem,3.5vw,3rem)]"
+                            style={{ fontWeight: 600 }}
                         >
                             <ClinicalGoldText>Quiet Luxury</ClinicalGoldText>
                             <br className="hidden sm:block" />

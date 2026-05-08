@@ -36,7 +36,7 @@ export const AboutOrbitCard = memo(function AboutOrbitCard({
                     }}
                 >
                     <h3
-                        className="font-['Gloock'] text-[clamp(1.15rem,2.6vw,1.5rem)] leading-[1.15] tracking-tight text-[#141210] md:text-[1.55rem]"
+                        className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.15rem,2.6vw,1.5rem)] leading-[1.15] tracking-tight text-[#141210] md:text-[1.55rem]"
                         style={{ fontWeight: 500 }}
                     >
                         {step.title}

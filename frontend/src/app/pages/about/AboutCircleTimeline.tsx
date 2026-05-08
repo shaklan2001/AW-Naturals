@@ -63,8 +63,8 @@ export function AboutCircleTimeline() {
                     </p>
                     <h2
                         id="about-orbit-heading"
-                        className="font-['Gloock'] text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-white md:text-[clamp(2rem,3.5vw,3rem)]"
-                        style={{ fontWeight: 400 }}
+                        className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-white md:text-[clamp(2rem,3.5vw,3rem)]"
+                        style={{ fontWeight: 600 }}
                     >
                         Our Core <span className={goldText}>Values</span>
                     </h2>
@@ -94,7 +94,7 @@ export function AboutCircleTimeline() {
                                     }}
                                 >
                                     <h3
-                                        className="font-['Gloock'] text-[1.2rem] leading-[1.15] tracking-tight text-[#141210]"
+                                        className="font-['Cormorant_Garamond',serif] font-semibold text-[1.2rem] leading-[1.15] tracking-tight text-[#141210]"
                                         style={{ fontWeight: 500 }}
                                     >
                                         {step.title}
