@@ -17,7 +17,7 @@ export function UpcomingProductsSection({ products }: UpcomingProductsSectionPro
             <div className="mx-auto max-w-7xl">
                 <div className="flex flex-col items-center pb-16 text-center">
                     <PremiumSectionChip>Future Formulations</PremiumSectionChip>
-                    <h2 className="mt-8 font-['Gloock'] text-[36px] leading-tight text-[#F5F5DC] md:text-[48px]">
+                    <h2 className="mt-8 font-['Cormorant_Garamond',serif] font-semibold text-[36px] leading-tight text-[#F5F5DC] md:text-[48px]">
                         Upcoming{' '}
                         <span className="animate-shine bg-gradient-to-r from-[#C6A85B] via-[#E5D08A] to-[#C6A85B] bg-clip-text italic text-transparent">
                             Releases
@@ -52,7 +52,7 @@ export function UpcomingProductsSection({ products }: UpcomingProductsSectionPro
                                 </div>
                             </Link>
                             <div>
-                                <h3 className="mb-1 font-['Gloock'] text-2xl tracking-wide text-[#F5F5DC]">{prod.name}</h3>
+                                <h3 className="mb-1 font-['Cormorant_Garamond',serif] font-semibold text-2xl tracking-wide text-[#F5F5DC]">{prod.name}</h3>
                                 <p className="mb-3 block font-['Inter'] text-[11px] font-semibold uppercase tracking-[0.2em] text-[#D4AF37]/90">
                                     {prod.benefit}
                                 </p>

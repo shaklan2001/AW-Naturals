@@ -25,7 +25,7 @@ export function CartPage() {
               aria-hidden
             />
           </div>
-          <h1 className="font-['Gloock'] text-4xl md:text-5xl mb-4 text-[#F5F5DC]">
+          <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-4xl md:text-5xl mb-4 text-[#F5F5DC]">
             Your Cart is Empty
           </h1>
           <p className="font-['Inter'] text-[#F5F5DC]/70 mb-8 font-light">
@@ -53,7 +53,7 @@ export function CartPage() {
             <ArrowLeft className="w-4 h-4" />
             Continue Shopping
           </Link>
-          <h1 className="font-['Gloock'] text-[clamp(2.5rem,6vw,4rem)] text-[#F5F5DC] tracking-wide">
+          <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(2.5rem,6vw,4rem)] text-[#F5F5DC] tracking-wide">
             Shopping Cart
           </h1>
         </div>
@@ -89,7 +89,7 @@ export function CartPage() {
                         <span className="font-['Inter'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#7a5c00]">
                           {item.benefit}
                         </span>
-                        <h3 className="font-['Gloock'] text-[1.25rem] sm:text-[1.5rem] text-[#141210] mt-0.5 leading-tight">
+                        <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[1.25rem] sm:text-[1.5rem] text-[#141210] mt-0.5 leading-tight">
                           {item.name}
                         </h3>
                       </div>
@@ -116,7 +116,7 @@ export function CartPage() {
                           >
                             <Minus className="w-3.5 h-3.5" />
                           </button>
-                          <span className="font-['Gloock'] text-[1rem] text-[#141210] w-6 text-center leading-none">
+                          <span className="font-['Cormorant_Garamond',serif] font-semibold text-[1rem] text-[#141210] w-6 text-center leading-none">
                             {item.quantity}
                           </span>
                           <button
@@ -138,7 +138,7 @@ export function CartPage() {
                           Total
                         </span>
                         <div className="flex flex-col items-end">
-                          <span className="font-['Gloock'] text-[1.5rem] sm:text-[1.8rem] text-[#8a6200] leading-none">
+                          <span className="font-['Cormorant_Garamond',serif] font-semibold text-[1.5rem] sm:text-[1.8rem] text-[#8a6200] leading-none">
                             ₹{(item.price * item.quantity).toFixed(0)}
                           </span>
                         </div>
@@ -160,7 +160,7 @@ export function CartPage() {
                 border: '1px solid rgba(180,155,80,0.35)',
               }}
             >
-              <h2 className="font-['Gloock'] text-[1.8rem] mb-6 text-[#141210] tracking-wide">
+              <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[1.8rem] mb-6 text-[#141210] tracking-wide">
                 Order Summary
               </h2>
 
@@ -175,8 +175,8 @@ export function CartPage() {
                 </div>
                 <div className="border-t border-[rgba(180,155,80,0.35)] pt-4">
                   <div className="flex justify-between items-baseline">
-                    <span className="font-['Gloock'] text-[1.3rem] text-[#141210]">Total</span>
-                    <span className="font-['Gloock'] text-[1.8rem] text-[#8a6200]">₹{totalPrice.toFixed(0)}</span>
+                    <span className="font-['Cormorant_Garamond',serif] font-semibold text-[1.3rem] text-[#141210]">Total</span>
+                    <span className="font-['Cormorant_Garamond',serif] font-semibold text-[1.8rem] text-[#8a6200]">₹{totalPrice.toFixed(0)}</span>
                   </div>
                 </div>
               </div>
@@ -195,7 +195,7 @@ export function CartPage() {
               </p>
 
               <div className="mt-6 pt-6 border-t border-[rgba(180,155,80,0.35)]">
-                <h3 className="font-['Gloock'] text-[1.1rem] mb-3 text-[#141210]">
+                <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[1.1rem] mb-3 text-[#141210]">
                   Order Includes:
                 </h3>
                 <ul className="space-y-2 font-['Inter'] text-[13px] font-light">

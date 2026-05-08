@@ -70,10 +70,10 @@ function MoreProductCard({
                 <p className="mb-1 font-['Inter'] text-[10px] font-bold uppercase tracking-[0.22em] text-[#8a6200]/70">
                     {p.category || p.benefit}
                 </p>
-                <h3 className="mb-1 font-['Gloock'] text-[1.25rem] text-[#141210]">
+                <h3 className="mb-1 font-['Cormorant_Garamond',serif] font-semibold text-[1.25rem] text-[#141210]">
                     {p.name}
                 </h3>
-                <p className="mb-4 font-['Gloock'] text-[1.4rem] text-[#8a6200]">
+                <p className="mb-4 font-['Cormorant_Garamond',serif] font-semibold text-[1.4rem] text-[#8a6200]">
                     ₹{p.price}
                 </p>
 
@@ -112,7 +112,7 @@ function MoreProductCard({
                             >
                                 <Minus className="h-3.5 w-3.5" />
                             </button>
-                            <span className="flex-1 text-center font-['Gloock'] text-[18px] text-[#141210] leading-none py-2">
+                            <span className="flex-1 text-center font-['Cormorant_Garamond',serif] font-semibold text-[18px] text-[#141210] leading-none py-2">
                                 {cartQty}
                             </span>
                             <button
@@ -242,7 +242,7 @@ export function ProductDetailView({
                             <p className="mb-3 font-['Inter'] text-[11px] font-semibold uppercase tracking-[0.3em] text-[#D4AF37]/70">
                                 AW Naturals
                             </p>
-                            <h1 className="font-['Gloock'] text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-wide text-[#F5F5DC]">
+                            <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-wide text-[#F5F5DC]">
                                 {product.name}
                             </h1>
                             <p className="mt-4 font-['Inter'] text-base font-light leading-relaxed text-[#F5F5DC]/65">
@@ -252,7 +252,7 @@ export function ProductDetailView({
 
                         {/* Price */}
                         <div className="flex items-baseline gap-4 border-b border-white/[0.06] pb-6">
-                            <span className="font-['Gloock'] text-[3rem] leading-none text-[#D4AF37]">
+                            <span className="font-['Cormorant_Garamond',serif] font-semibold text-[3rem] leading-none text-[#D4AF37]">
                                 ₹{product.price}
                             </span>
                             <span className="font-['Inter'] text-sm font-light text-[#F5F5DC]/50">
@@ -298,7 +298,7 @@ export function ProductDetailView({
                                             >
                                                 <Minus className="h-4 w-4" />
                                             </button>
-                                            <span className="font-['Gloock'] text-2xl text-[#F5F5DC]">
+                                            <span className="font-['Cormorant_Garamond',serif] font-semibold text-2xl text-[#F5F5DC]">
                                                 {shownQty}
                                             </span>
                                             <button
@@ -341,7 +341,7 @@ export function ProductDetailView({
                                 border: '1px solid rgba(180,155,80,0.35)',
                             }}
                         >
-                            <h2 className="mb-3 font-['Gloock'] text-[22px] font-bold tracking-wide text-[#141210]">
+                            <h2 className="mb-3 font-['Cormorant_Garamond',serif] text-[22px] font-bold tracking-wide text-[#141210]">
                                 Key Benefits
                             </h2>
                             {benefitsIntro && (
@@ -375,7 +375,7 @@ export function ProductDetailView({
                             >
                                 <div className="mb-5 flex items-center gap-3">
                                     <Leaf className="h-5 w-5 text-[#8a6200]" aria-hidden />
-                                    <h2 className="font-['Gloock'] text-[22px] font-bold tracking-wide text-[#141210]">
+                                    <h2 className="font-['Cormorant_Garamond',serif] text-[22px] font-bold tracking-wide text-[#141210]">
                                         Premium Ingredients
                                     </h2>
                                 </div>
@@ -395,7 +395,7 @@ export function ProductDetailView({
                         {/* ── Clinical note (only when enabled in admin + text) ── */}
                         {clinicalBody && (
                             <div className="rounded-[20px] border-l-4 border-[#D4AF37] bg-gradient-to-r from-[#D4AF37]/10 to-transparent p-7">
-                                <h2 className="mb-3 font-['Gloock'] text-[18px] tracking-wide text-[#D4AF37]">
+                                <h2 className="mb-3 font-['Cormorant_Garamond',serif] font-semibold text-[18px] tracking-wide text-[#D4AF37]">
                                     Clinical Note
                                 </h2>
                                 <p className="font-['Inter'] text-[14px] font-light leading-relaxed text-[#F5F5DC]/70">
@@ -412,7 +412,7 @@ export function ProductDetailView({
                 <section className="mt-8 border-t border-white/[0.05] py-20">
                     <div className="max-w-[1320px] mx-auto px-6">
                         <div className="mb-10">
-                            <h2 className="font-['Gloock'] text-[2.4rem] text-[#F5F5DC] tracking-wide">
+                            <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[2.4rem] text-[#F5F5DC] tracking-wide">
                                 Explore More{' '}
                                 <span className="animate-shine bg-gradient-to-r from-[#C6A85B] via-[#E5D08A] to-[#C6A85B] bg-clip-text italic text-transparent">
                                     Formulations

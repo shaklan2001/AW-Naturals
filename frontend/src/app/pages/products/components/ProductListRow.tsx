@@ -62,7 +62,7 @@ export function ProductListRow({ product, index, quantityInCart, onAddToCart, on
                 </div>
 
                 <Link to={`/products/${product.id}`}>
-                    <h3 className="font-['Gloock'] text-[24px] mb-3 text-[#1A1A1A] hover:text-[#8B6B22] transition-colors duration-300">
+                    <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[24px] mb-3 text-[#1A1A1A] hover:text-[#8B6B22] transition-colors duration-300">
                         {product.name}
                     </h3>
                 </Link>
@@ -124,7 +124,7 @@ export function ProductListRow({ product, index, quantityInCart, onAddToCart, on
                             >
                                 <Minus className="w-4 h-4" />
                             </button>
-                            <span className="flex-1 text-center font-['Gloock'] text-[20px] text-white leading-none">
+                            <span className="flex-1 text-center font-['Cormorant_Garamond',serif] font-semibold text-[20px] text-white leading-none">
                                 {qty}
                             </span>
                             <button
