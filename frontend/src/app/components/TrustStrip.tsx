@@ -10,7 +10,7 @@ export function TrustStrip() {
   ];
 
   return (
-    <section className="relative -mt-10 overflow-hidden bg-[#0B0B0B] py-12 sm:-mt-14 lg:-mt-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[#0B0B0B] pt-16 pb-12 sm:pt-20 sm:pb-14 lg:pt-28 lg:pb-24">
       {/* Soft top blend from hero */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B0B0B] via-[#0B0B0B]/80 to-transparent sm:h-28 lg:h-32"

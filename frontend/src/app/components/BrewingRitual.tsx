@@ -56,7 +56,7 @@ export function BrewingRitual() {
           <MethodologyChip />
         </div>
         
-        <h2 className="font-['Gloock'] text-[48px] md:text-[64px] leading-[1.1] mb-6">
+        <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[48px] md:text-[64px] leading-[1.1] mb-6">
           <span className="text-white">The Clinical</span>{' '}
           <span className="inline-block italic bg-gradient-to-r from-[#C6A85B] to-[#E5D08A] bg-clip-text text-transparent [background-clip:text] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Brewing Ritual
@@ -133,7 +133,7 @@ export function BrewingRitual() {
                     </span>
                   </div>
 
-                  <h3 className="font-['Gloock'] text-[32px] md:text-[40px] text-white mb-2 leading-tight">
+                  <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[32px] md:text-[40px] text-white mb-2 leading-tight">
                     {step.title}
                   </h3>
                   
@@ -174,7 +174,7 @@ export function BrewingRitual() {
           >
             <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#8B6B22] p-[1px]">
               <div className="w-full h-full rounded-full bg-[#0B0B0B] flex items-center justify-center">
-                <span className="font-['Gloock'] text-[#D4AF37] text-2xl">AW</span>
+                <span className="font-['Cormorant_Garamond',serif] font-semibold text-[#D4AF37] text-2xl">AW</span>
               </div>
             </div>
             <div>

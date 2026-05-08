@@ -129,7 +129,7 @@ export function BundleSection() {
             </span>
           </div>
 
-          <h2 className="font-['Gloock'] text-[48px] md:text-[56px] lg:text-[64px] mb-6 text-[#F5F5DC] tracking-tight leading-none" style={{ fontWeight: 400 }}>
+          <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[48px] md:text-[56px] lg:text-[64px] mb-6 text-[#F5F5DC] tracking-tight leading-none" style={{ fontWeight: 600 }}>
             Premium <GradientText>Bundles</GradientText>
           </h2>
           <p className="font-['Inter'] text-[16px] md:text-[18px] text-[#F5F5DC]/60 font-light max-w-2xl mx-auto">
@@ -196,7 +196,7 @@ export function BundleSection() {
                 </div>
 
                 <div className="pt-8 flex-grow flex flex-col relative z-10 text-[#0B0B0B]">
-                  <h3 className="font-['Gloock'] text-[32px] mb-3 text-[#1A1A1A]">
+                  <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[32px] mb-3 text-[#1A1A1A]">
                     {bundle.name}
                   </h3>
                   <p className="font-['Inter'] text-[12px] mb-5 uppercase tracking-[0.15em] font-bold text-[#8B6B22]">

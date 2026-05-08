@@ -120,7 +120,7 @@ export function Hero() {
                 className="w-full flex flex-col items-center"
               >
                 {/* Title */}
-                <h3 className="font-['Gloock'] text-[34px] leading-tight mb-3 text-white">
+                <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[34px] leading-tight mb-3 text-white">
                   {activeTea.namePart1}{' '}
                   <span className={cn("italic bg-gradient-to-r bg-clip-text text-transparent [background-clip:text] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]", activeTea.textGradient)}>
                     {activeTea.namePart2}
@@ -220,7 +220,7 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.05 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="whitespace-nowrap font-['Gloock'] text-[15vw] leading-none text-white font-bold tracking-tighter"
+            className="whitespace-nowrap font-['Cormorant_Garamond',serif] text-[15vw] leading-none text-white font-bold tracking-tighter"
           >
             {activeTea.shortName.toUpperCase()}
           </motion.div>
@@ -258,7 +258,7 @@ export function Hero() {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="w-full"
               >
-                <h1 className="font-['Gloock'] text-[36px] sm:text-[64px] lg:text-[76px] leading-[1.05] tracking-[-0.02em] mb-4 lg:mb-6 text-white isolate" style={{ fontWeight: 400 }}>
+                <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-[36px] sm:text-[64px] lg:text-[76px] leading-[1.05] tracking-[-0.02em] mb-4 lg:mb-6 text-white isolate" style={{ fontWeight: 600 }}>
                   {activeTea.namePart1}{' '}
                   <span
                     className={cn(

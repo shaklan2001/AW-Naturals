@@ -93,7 +93,7 @@ export function ProductShowcase() {
               Discover Your Cure
             </span>
           </div>
-          <h2 className="font-['Gloock'] text-[44px] md:text-[56px] mb-2 text-[#F5F5DC] leading-none" style={{ fontWeight: 400 }}>
+          <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[44px] md:text-[56px] mb-2 text-[#F5F5DC] leading-none" style={{ fontWeight: 600 }}>
             Clinical <GradientText>Insights</GradientText>
           </h2>
           <p className="font-['Inter'] text-[16px] md:text-[18px] text-[#F5F5DC]/60 font-light">
@@ -172,7 +172,7 @@ export function ProductShowcase() {
                   <span className="font-['Inter'] text-[11px] text-[#8a6200] font-bold tracking-[2px] uppercase mb-1 drop-shadow-md">
                     The Problem
                   </span>
-                  <h3 className="font-['Gloock'] text-[24px] text-white/95 leading-none mb-4 max-w-[280px]">
+                  <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[24px] text-white/95 leading-none mb-4 max-w-[280px]">
                     {activeTea.problem}
                   </h3>
 
@@ -183,7 +183,7 @@ export function ProductShowcase() {
                   <span className="font-['Inter'] text-[11px] text-[#C6A85B] font-bold tracking-[2px] uppercase mb-1 drop-shadow-md">
                     The Solution
                   </span>
-                  <h3 className="font-['Gloock'] text-[28px] leading-[1.1] tracking-tight mb-2 text-white">
+                  <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[28px] leading-[1.1] tracking-tight mb-2 text-white">
                     {activeTea.namePart1}{' '}
                     <span className={`bg-gradient-to-r ${activeTea.textGradient} bg-clip-text text-transparent italic`}>
                       {activeTea.namePart2}
@@ -242,7 +242,7 @@ export function ProductShowcase() {
                   exit={{ opacity: 0, x: 30, filter: 'blur(10px)' }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                  <h3 className="font-['Gloock'] text-[32px] sm:text-[36px] text-white/90 leading-[1.1] max-w-[220px] drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]">
+                  <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[32px] sm:text-[36px] text-white/90 leading-[1.1] max-w-[220px] drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]">
                     {activeTea.problem}
                   </h3>
                 </motion.div>
@@ -337,7 +337,7 @@ export function ProductShowcase() {
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   className="flex flex-col items-center lg:items-start"
                 >
-                  <h3 className="font-['Gloock'] text-[32px] sm:text-[36px] leading-[1.05] tracking-[-0.01em] mb-4 text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]">
+                  <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[32px] sm:text-[36px] leading-[1.05] tracking-[-0.01em] mb-4 text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]">
                     {activeTea.namePart1} <br />
                     <span className={`bg-gradient-to-r ${activeTea.textGradient} bg-clip-text text-transparent italic`}>
                       {activeTea.namePart2}
