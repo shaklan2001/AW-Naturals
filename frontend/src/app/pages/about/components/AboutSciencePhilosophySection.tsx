@@ -33,8 +33,8 @@ export const AboutSciencePhilosophySection = memo(function AboutSciencePhilosoph
                         </p>
                         <h2
                             id="science-philosophy-heading"
-                            className="mt-4 font-['Gloock'] text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-white md:mt-5 md:text-[clamp(2rem,3.5vw,3rem)]"
-                            style={{ fontWeight: 400 }}
+                            className="mt-4 font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-white md:mt-5 md:text-[clamp(2rem,3.5vw,3rem)]"
+                            style={{ fontWeight: 600 }}
                         >
                             <ClinicalGoldText>Ayurgenomics</ClinicalGoldText>
                             {' · '}

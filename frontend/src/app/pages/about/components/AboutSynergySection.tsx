@@ -15,8 +15,8 @@ export const AboutSynergySection = memo(function AboutSynergySection() {
                     </p>
                     <h2
                         id="about-synergy-heading"
-                        className="mt-4 font-['Gloock'] text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-[#F5F5DC] md:mt-5 md:text-[clamp(2rem,3.5vw,3rem)]"
-                        style={{ fontWeight: 400 }}
+                        className="mt-4 font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.08] tracking-tight text-[#F5F5DC] md:mt-5 md:text-[clamp(2rem,3.5vw,3rem)]"
+                        style={{ fontWeight: 600 }}
                     >
                         A <ClinicalGoldText>360-degree</ClinicalGoldText> lens on prevention
                     </h2>
@@ -30,7 +30,7 @@ export const AboutSynergySection = memo(function AboutSynergySection() {
                         that our upcoming products—from the Oil Pulling Oil to our Immunity blends—are not just "natural,"
                         but are clinically engineered to make you truly fit for the future.
                     </p>
-                    <p className={`mt-8 font-['Gloock'] text-[1.25rem] italic tracking-wide text-[#c8a84b]/90`}>
+                    <p className={`mt-8 font-['Cormorant_Garamond',serif] font-semibold text-[1.25rem] italic tracking-wide text-[#c8a84b]/90`}>
                         "Decades of Experience. One Vision for the Future."
                     </p>
                 </div>

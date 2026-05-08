@@ -7,7 +7,7 @@ export const AboutStatsSection = memo(function AboutStatsSection() {
             <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-6 text-center md:gap-10 lg:grid-cols-4 lg:gap-12">
                 {ABOUT_STATS.map((stat) => (
                     <div key={stat.id} className="space-y-2 md:space-y-3">
-                        <div className="font-['Gloock'] text-4xl tracking-tighter text-white md:text-5xl lg:text-6xl">
+                        <div className="font-['Cormorant_Garamond',serif] font-semibold text-4xl tracking-tighter text-white md:text-5xl lg:text-6xl">
                             <span className="inline-block">{stat.num}</span>
                             <span className="font-light text-white">{stat.suffix}</span>
                         </div>

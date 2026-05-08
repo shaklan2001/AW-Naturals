@@ -40,8 +40,8 @@ export const FounderPortraitCard = memo(function FounderPortraitCard({
                         aria-label={`Portrait placeholder for ${name}`}
                     >
                         <div
-                            className="mb-4 flex h-[min(32vw,120px)] w-[min(32vw,120px)] items-center justify-center rounded-full border border-[#8a7a5c]/50 bg-black/35 font-['Gloock'] text-[clamp(1.75rem,6vw,2.5rem)] tracking-tight text-[#c8a84b]"
-                            style={{ fontWeight: 400 }}
+                            className="mb-4 flex h-[min(32vw,120px)] w-[min(32vw,120px)] items-center justify-center rounded-full border border-[#8a7a5c]/50 bg-black/35 font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.75rem,6vw,2.5rem)] tracking-tight text-[#c8a84b]"
+                            style={{ fontWeight: 600 }}
                         >
                             {initials}
                         </div>

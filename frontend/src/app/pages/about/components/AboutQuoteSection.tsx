@@ -37,11 +37,11 @@ export const AboutQuoteSection = memo(function AboutQuoteSection() {
                 />
             </div>
             <div className="relative z-10 mx-auto max-w-6xl px-6 pointer-events-none">
-                <h2 className="founder-quote font-['Gloock'] text-4xl leading-[1.15] text-[#F5F5DC] opacity-95 drop-shadow-2xl sm:text-5xl md:text-7xl lg:text-8xl flex flex-wrap justify-center">
+                <h2 className="founder-quote font-['Cormorant_Garamond',serif] font-semibold text-4xl leading-[1.15] text-[#F5F5DC] opacity-95 drop-shadow-2xl sm:text-5xl md:text-7xl lg:text-8xl flex flex-wrap justify-center">
                     <AnimatedWord progress={scrollYProgress} range={[0 * step, 1 * step]}>&ldquo;Decades</AnimatedWord>
                     <AnimatedWord progress={scrollYProgress} range={[1 * step, 2 * step]}>of</AnimatedWord>
                     <AnimatedWord progress={scrollYProgress} range={[2 * step, 3 * step]}>
-                        <span className="font-['Gloock'] italic bg-gradient-to-r from-[#C6A85B] via-[#E5D08A] to-[#C6A85B] bg-clip-text text-transparent">
+                        <span className="font-['Cormorant_Garamond',serif] font-semibold italic bg-gradient-to-r from-[#C6A85B] via-[#E5D08A] to-[#C6A85B] bg-clip-text text-transparent">
                             Experience
                         </span>
                         .

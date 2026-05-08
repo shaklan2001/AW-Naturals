@@ -37,7 +37,7 @@ export const MissionVisionCardColumn = memo(function MissionVisionCardColumn({
                         />
                     </div>
                     <h3
-                        className="font-['Gloock'] text-[1.45rem] leading-snug tracking-tight text-[#141210] md:text-[1.65rem] lg:text-[1.75rem]"
+                        className="font-['Cormorant_Garamond',serif] font-semibold text-[1.45rem] leading-snug tracking-tight text-[#141210] md:text-[1.65rem] lg:text-[1.75rem]"
                         style={{ fontWeight: 500 }}
                     >
                         {item.title}
