@@ -52,8 +52,8 @@ export function FaqSection() {
                     </div>
 
                     <h2
-                        className="mb-6 font-['Gloock'] text-[48px] leading-none tracking-tight text-[#F5F5DC] md:text-[56px] lg:text-[64px]"
-                        style={{ fontWeight: 400 }}
+                        className="mb-6 font-['Cormorant_Garamond',serif] font-semibold text-[48px] leading-none tracking-tight text-[#F5F5DC] md:text-[56px] lg:text-[64px]"
+                        style={{ fontWeight: 600 }}
                     >
                         Answers for your{' '}
                         <span className="relative inline-block">

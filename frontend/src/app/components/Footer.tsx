@@ -164,7 +164,7 @@ export function Footer() {
 
             <div className="pointer-events-none relative -mb-[2.5vw] flex w-full justify-center overflow-hidden select-none lg:-mb-[4vw]">
                 <h1
-                    className="whitespace-nowrap text-center font-['Gloock'] leading-[0.75] tracking-tighter text-white"
+                    className="whitespace-nowrap text-center font-['Cormorant_Garamond',serif] font-semibold leading-[0.75] tracking-tighter text-white"
                     style={{
                         fontSize: '16vw',
                         background: 'linear-gradient(to bottom, rgba(212,175,55,0.12) 0%, rgba(15,61,46,0.02) 100%)',

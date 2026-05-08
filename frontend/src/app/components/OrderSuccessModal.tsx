@@ -140,8 +140,8 @@ export function OrderSuccessModal({ open, orderId, onContinue }: OrderSuccessMod
                   </p>
                   <h2
                     id={titleId}
-                    className="mt-2 font-['Gloock'] text-[2rem] tracking-tight text-[#1f1c18] sm:text-[2.25rem]"
-                    style={{ fontWeight: 400 }}
+                    className="mt-2 font-['Cormorant_Garamond',serif] font-semibold text-[2rem] tracking-tight text-[#1f1c18] sm:text-[2.25rem]"
+                    style={{ fontWeight: 600 }}
                   >
                     Order confirmed
                   </h2>

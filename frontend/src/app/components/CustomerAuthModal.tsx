@@ -182,8 +182,8 @@ export function CustomerAuthModal() {
             </p>
             <h2
               id={titleId}
-              className="mt-3 text-center font-['Gloock'] text-[2rem] tracking-tight text-[#1f1c18] md:text-[2.25rem]"
-              style={{ fontWeight: 400 }}
+              className="mt-3 text-center font-['Cormorant_Garamond',serif] font-semibold text-[2rem] tracking-tight text-[#1f1c18] md:text-[2.25rem]"
+              style={{ fontWeight: 600 }}
             >
               {authModal === "login" ? "Sign in" : "Sign up"}
             </h2>

@@ -150,8 +150,8 @@ export function Testimonials() {
                         </span>
                     </div>
                     <h2
-                        className="mb-6 font-['Gloock'] text-[48px] leading-none tracking-tight text-[#F5F5DC] md:text-[56px] lg:text-[64px]"
-                        style={{ fontWeight: 400 }}
+                        className="mb-6 font-['Cormorant_Garamond',serif] font-semibold text-[48px] leading-none tracking-tight text-[#F5F5DC] md:text-[56px] lg:text-[64px]"
+                        style={{ fontWeight: 600 }}
                     >
                         Clinical <span className="italic text-[#C6A85B]">Validation</span>
                     </h2>
@@ -229,8 +229,8 @@ export function Testimonials() {
                     </div>
 
                     <h2
-                        className="mb-4 font-['Gloock'] text-[36px] leading-none tracking-tight text-[#F5F5DC] sm:text-[48px] md:mb-6 md:text-[56px] lg:text-[64px]"
-                        style={{ fontWeight: 400 }}
+                        className="mb-4 font-['Cormorant_Garamond',serif] font-semibold text-[36px] leading-none tracking-tight text-[#F5F5DC] sm:text-[48px] md:mb-6 md:text-[56px] lg:text-[64px]"
+                        style={{ fontWeight: 600 }}
                     >
                         Clinical{' '}
                         <span className="relative inline-block">

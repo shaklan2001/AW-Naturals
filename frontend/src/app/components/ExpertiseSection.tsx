@@ -54,11 +54,11 @@ export function ExpertiseSection() {
                 className="absolute bottom-5 left-5 right-5 md:bottom-10 md:left-10 md:right-auto bg-[#0B0B0B]/40 border border-white/10 rounded-2xl p-4 md:p-8 backdrop-blur-xl shadow-2xl"
               >
                 <div className="flex items-center gap-4 md:gap-6">
-                  <div className="text-[32px] md:text-[52px] font-['Gloock'] text-[#D4AF37] leading-none drop-shadow-[0_2px_10px_rgba(212,175,55,0.3)]">
+                  <div className="text-[32px] md:text-[52px] font-['Cormorant_Garamond',serif] font-semibold text-[#D4AF37] leading-none drop-shadow-[0_2px_10px_rgba(212,175,55,0.3)]">
                     40+
                   </div>
                   <div className="space-y-0.5 md:space-y-1">
-                    <h4 className="text-[#F5F5DC] font-['Gloock'] text-[16px] md:text-[22px] tracking-tight">Years of Experience</h4>
+                    <h4 className="text-[#F5F5DC] font-['Cormorant_Garamond',serif] font-semibold text-[16px] md:text-[22px] tracking-tight">Years of Experience</h4>
                     <p className="text-[#F5F5DC]/40 font-['Inter'] text-[10px] md:text-[12px] uppercase tracking-[0.2em] font-semibold">In clinical wellness</p>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ export function ExpertiseSection() {
             </div>
 
             {/* Main Heading in Gloock */}
-            <h2 className="font-['Gloock'] text-[44px] md:text-[56px] lg:text-[68px] mb-8 text-white leading-[1.05] tracking-tight" style={{ fontWeight: 400 }}>
+            <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[44px] md:text-[56px] lg:text-[68px] mb-8 text-white leading-[1.05] tracking-tight" style={{ fontWeight: 600 }}>
               Bridging Ancient Wisdom &<br />
               <span className="italic">
                 <GradientText>Modern Science</GradientText>
@@ -107,7 +107,7 @@ export function ExpertiseSection() {
               {/* Highlight bar */}
               <div className="absolute top-0 left-0 w-[2px] h-full bg-gradient-to-b from-[#D4AF37] via-[#D4AF37]/50 to-transparent" />
               
-              <p className="font-['Gloock'] text-white/90 text-[22px] md:text-[24px] mb-8 italic leading-[1.4] relative z-10">
+              <p className="font-['Cormorant_Garamond',serif] font-semibold text-white/90 text-[22px] md:text-[24px] mb-8 italic leading-[1.4] relative z-10">
                 "True well-being is not passive healing—it is an intentional architecture designed at the intersection of time-tested botanical knowledge and rigorous scientific validation."
               </p>
               
