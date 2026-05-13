@@ -51,7 +51,7 @@ export function BlogPostCard({ post, index }: BlogPostCardProps) {
                             {formatPostDate(post.createdAt)}
                         </div>
 
-                        <h3 className="mb-4 font-['Gloock'] text-[28px] leading-tight text-[#1A1A1A]">
+                        <h3 className="mb-4 font-['Cormorant_Garamond',serif] font-semibold text-[28px] leading-tight text-[#1A1A1A]">
                             {post.title}
                         </h3>
 

@@ -50,7 +50,7 @@ export function BlogFeaturedPost({ post }: BlogFeaturedPostProps) {
                                 {formatPostDate(post.createdAt)}
                             </div>
 
-                            <h2 className="mb-6 font-['Gloock'] text-[28px] leading-tight text-[#1A1A1A] lg:text-[36px] xl:text-[40px]">
+                            <h2 className="mb-6 font-['Cormorant_Garamond',serif] font-semibold text-[28px] leading-tight text-[#1A1A1A] lg:text-[36px] xl:text-[40px]">
                                 {post.title}
                             </h2>
 

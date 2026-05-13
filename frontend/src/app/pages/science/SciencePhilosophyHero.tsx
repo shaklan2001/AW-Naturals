@@ -33,7 +33,7 @@ export const SciencePhilosophyHero = memo(function SciencePhilosophyHero() {
                 </p>
                 <h1
                     id={SCIENCE_PAGE_HEADING_ID}
-                    className="mb-6 mt-5 whitespace-nowrap font-['Gloock'] text-[clamp(1.55rem,5.2vw,4.5rem)] leading-[1.08] tracking-tight text-[#F5F5DC] md:mt-6"
+                    className="mb-6 mt-5 whitespace-nowrap font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.55rem,5.2vw,4.5rem)] leading-[1.08] tracking-tight text-[#F5F5DC] md:mt-6"
                 >
                     <ClinicalGoldText>Ayurgenomics</ClinicalGoldText>
                     <span className="text-white/90">{' & Phygital\u00A0care'}</span>

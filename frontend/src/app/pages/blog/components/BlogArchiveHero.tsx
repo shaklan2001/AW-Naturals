@@ -10,7 +10,7 @@ export function BlogArchiveHero() {
                         <PremiumSectionChip>Clinical Archive</PremiumSectionChip>
                     </div>
 
-                    <h1 className="font-['Gloock'] text-[48px] md:text-[72px] mb-6 text-[#F5F5DC] tracking-tight leading-tight">
+                    <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-[48px] md:text-[72px] mb-6 text-[#F5F5DC] tracking-tight leading-tight">
                         Wellness{' '}
                         <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C6A85B] via-[#E5D08A] to-[#C6A85B] animate-shine">
                             Insights

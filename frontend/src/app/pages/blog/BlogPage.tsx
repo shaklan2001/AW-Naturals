@@ -34,7 +34,7 @@ export function BlogPage() {
 
                 {!isPending && !isError && blogs.length === 0 ? (
                     <div className="mx-auto max-w-lg py-16 text-center">
-                        <p className="font-['Gloock'] text-2xl text-[#F5F5DC]">No articles yet</p>
+                        <p className="font-['Cormorant_Garamond',serif] font-semibold text-2xl text-[#F5F5DC]">No articles yet</p>
                         <p className="mt-3 font-['Inter'] text-sm text-[#F5F5DC]/55">
                             Published posts from the admin will appear here.
                         </p>
