@@ -46,16 +46,16 @@ export function NotFoundPage() {
             Quick Links
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link to="/products" className="font-['Inter'] text-[#D4AF37] hover:text-[#D4AF37]/80 transition-colors duration-300" style={{ fontWeight: 400 }}>
+            <Link to="/products" className="font-['Inter'] text-[#D4AF37] hover:text-[#D4AF37]/80 transition-colors duration-300" style={{ fontWeight: 600 }}>
               Shop
             </Link>
-            <Link to="/about" className="font-['Inter'] text-[#D4AF37] hover:text-[#D4AF37]/80 transition-colors duration-300" style={{ fontWeight: 400 }}>
+            <Link to="/about" className="font-['Inter'] text-[#D4AF37] hover:text-[#D4AF37]/80 transition-colors duration-300" style={{ fontWeight: 600 }}>
               About
             </Link>
-            <Link to="/blog" className="font-['Inter'] text-[#D4AF37] hover:text-[#D4AF37]/80 transition-colors duration-300" style={{ fontWeight: 400 }}>
+            <Link to="/blog" className="font-['Inter'] text-[#D4AF37] hover:text-[#D4AF37]/80 transition-colors duration-300" style={{ fontWeight: 600 }}>
               Blog
             </Link>
-            <Link to="/services" className="font-['Inter'] text-[#D4AF37] hover:text-[#D4AF37]/80 transition-colors duration-300" style={{ fontWeight: 400 }}>
+            <Link to="/services" className="font-['Inter'] text-[#D4AF37] hover:text-[#D4AF37]/80 transition-colors duration-300" style={{ fontWeight: 600 }}>
               Services
             </Link>
           </div>

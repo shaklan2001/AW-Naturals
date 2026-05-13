@@ -81,7 +81,7 @@ export function WellnessQuiz() {
                             </span>
                         </div>
 
-                        <h2 className="font-['Gloock'] text-[40px] sm:text-[48px] lg:text-[56px] text-white leading-[1.05] mb-6">
+                        <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[40px] sm:text-[48px] lg:text-[56px] text-white leading-[1.05] mb-6">
                             Still confused about what's best for your health?
                         </h2>
 

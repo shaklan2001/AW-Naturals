@@ -90,7 +90,7 @@ export function ContactPage() {
                             <PremiumSectionChip>Clinical Archive</PremiumSectionChip>
                         </motion.div>
 
-                        <h1 className="font-['Gloock'] text-[48px] md:text-[72px] mb-6 text-[#F5F5DC] tracking-tight leading-tight">
+                        <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-[48px] md:text-[72px] mb-6 text-[#F5F5DC] tracking-tight leading-tight">
                             We're Here{' '}
                             <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C6A85B] via-[#E5D08A] to-[#C6A85B] animate-shine">
                                 For You
@@ -207,8 +207,8 @@ export function ContactPage() {
                                             ))}
                                         </div>
                                         <h2
-                                            className="mt-2 font-['Gloock'] text-[clamp(1.6rem,3.5vw,2.5rem)] leading-[1.1] tracking-tight text-[#F5F5DC]"
-                                            style={{ fontWeight: 400 }}
+                                            className="mt-2 font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.6rem,3.5vw,2.5rem)] leading-[1.1] tracking-tight text-[#F5F5DC]"
+                                            style={{ fontWeight: 600 }}
                                         >
                                             Let's{' '}
                                             <span
@@ -366,8 +366,8 @@ export function ContactPage() {
                                     <div className="mx-auto mb-6 h-px w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
 
                                     <h2
-                                        className="font-['Gloock'] text-[clamp(1.8rem,5vw,3rem)] leading-tight tracking-tight text-[#F5F5DC]"
-                                        style={{ fontWeight: 400 }}
+                                        className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.8rem,5vw,3rem)] leading-tight tracking-tight text-[#F5F5DC]"
+                                        style={{ fontWeight: 600 }}
                                     >
                                         Query Received!
                                     </h2>

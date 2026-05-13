@@ -77,7 +77,7 @@ export function ServicesPage() {
                         <div className="mb-8 flex justify-center">
                             <PremiumSectionChip>Our Services</PremiumSectionChip>
                         </div>
-                        <h1 className="mb-6 font-['Gloock'] text-[48px] leading-tight tracking-tight text-[#F5F5DC] md:text-[64px] lg:text-[72px]">
+                        <h1 className="mb-6 font-['Cormorant_Garamond',serif] font-semibold text-[48px] leading-tight tracking-tight text-[#F5F5DC] md:text-[64px] lg:text-[72px]">
                             The Phygital{' '}
                             <span className="animate-shine bg-gradient-to-r from-[#C6A85B] via-[#E5D08A] to-[#C6A85B] bg-clip-text italic text-transparent">
                                 Ecosystem
@@ -133,7 +133,7 @@ export function ServicesPage() {
                                         style={{ backgroundImage: noiseBg }}
                                     />
                                     <div className="relative z-10">
-                                        <h3 className="mb-6 font-['Gloock'] text-2xl font-semibold text-[#1A1A1A]">
+                                        <h3 className="mb-6 font-['Cormorant_Garamond',serif] text-2xl font-semibold text-[#1A1A1A]">
                                             What&apos;s Included
                                         </h3>
                                         <ul className="space-y-4">

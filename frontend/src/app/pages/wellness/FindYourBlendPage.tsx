@@ -212,7 +212,7 @@ export function FindYourBlendPage() {
                             transition={{ duration: 0.4, ease: 'easeOut' }}
                             className="text-center"
                         >
-                            <h1 className="font-['Gloock'] text-[clamp(2.15rem,5.5vw,3.25rem)] leading-[1.1] tracking-tight text-[#F5F5DC] mb-6">
+                            <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(2.15rem,5.5vw,3.25rem)] leading-[1.1] tracking-tight text-[#F5F5DC] mb-6">
                                 Find your{' '}
                                 <span className="bg-gradient-to-r from-[#D4AF37] via-[#F5F5DC] to-[#D4AF37] bg-clip-text text-transparent">
                                     blend
@@ -303,7 +303,7 @@ export function FindYourBlendPage() {
                                 </div>
                             </div>
 
-                            <h2 className="font-['Gloock'] text-[clamp(1.5rem,4.2vw,2.15rem)] leading-snug text-[#F5F5DC] mb-3">
+                            <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.5rem,4.2vw,2.15rem)] leading-snug text-[#F5F5DC] mb-3">
                                 {QUIZ_QUESTIONS[stepIndex].title}
                             </h2>
                             <p className="font-['Inter'] text-[13px] text-white/40 mb-8">
@@ -443,7 +443,7 @@ export function FindYourBlendPage() {
                                 
                                 {/* Inner percentage readout */}
                                 <div className="absolute flex flex-col items-center justify-center text-center">
-                                    <span className="font-['Gloock'] text-[30px] font-bold text-[#F5F5DC] leading-none">
+                                    <span className="font-['Cormorant_Garamond',serif] text-[30px] font-bold text-[#F5F5DC] leading-none">
                                         {calculatingProgress}%
                                     </span>
                                     <span className="font-['Inter'] text-[8px] uppercase tracking-[0.2em] text-[#C6A85B] mt-1 font-bold">
@@ -452,7 +452,7 @@ export function FindYourBlendPage() {
                                 </div>
                             </div>
 
-                            <h2 className="font-['Gloock'] text-[24px] text-white mb-2">
+                            <h2 className="font-['Cormorant_Garamond',serif] font-semibold text-[24px] text-white mb-2">
                                 Clinical Synthesis
                             </h2>
                             <p className="font-['Inter'] text-[13px] text-white/50 max-w-sm mx-auto mb-8">
@@ -542,7 +542,7 @@ export function FindYourBlendPage() {
                                 <p className="font-['Inter'] text-[11px] font-bold uppercase tracking-[0.3em] text-white/40">
                                     {resultDetail.subtitle}
                                 </p>
-                                <h2 className="mt-2 font-['Gloock'] text-[clamp(1.75rem,4.5vw,2.5rem)] leading-tight text-[#F5F5DC] max-w-xl">
+                                <h2 className="mt-2 font-['Cormorant_Garamond',serif] font-semibold text-[clamp(1.75rem,4.5vw,2.5rem)] leading-tight text-[#F5F5DC] max-w-xl">
                                     {resultDetail.title}
                                 </h2>
                             </div>
@@ -583,7 +583,7 @@ export function FindYourBlendPage() {
                                                         </span>
 
                                                         <Link to={`/products/${recommendedProduct.id}`}>
-                                                            <h3 className="font-['Gloock'] text-[22px] md:text-[25px] leading-tight text-white hover:text-[#E5D08A] transition-colors duration-300 mb-2">
+                                                            <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[22px] md:text-[25px] leading-tight text-white hover:text-[#E5D08A] transition-colors duration-300 mb-2">
                                                                 {recommendedProduct.name}
                                                             </h3>
                                                         </Link>
@@ -627,7 +627,7 @@ export function FindYourBlendPage() {
                                                                     >
                                                                         <Minus className="w-3.5 h-3.5" />
                                                                     </button>
-                                                                    <span className="flex-1 text-center font-['Gloock'] text-[17px] text-white leading-none">
+                                                                    <span className="flex-1 text-center font-['Cormorant_Garamond',serif] font-semibold text-[17px] text-white leading-none">
                                                                         {recommendedQty}
                                                                     </span>
                                                                     <button
@@ -652,7 +652,7 @@ export function FindYourBlendPage() {
                                                 background: 'linear-gradient(135deg, rgba(17,24,20,0.9) 0%, rgba(8,11,9,0.95) 100%)',
                                             }}
                                         >
-                                            <h3 className="font-['Gloock'] text-[21px] text-white mb-2">{resultDetail.title}</h3>
+                                            <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[21px] text-white mb-2">{resultDetail.title}</h3>
                                             <p className="font-['Inter'] text-[13.5px] text-white/60 mb-6 font-light leading-relaxed">
                                                 Our premium Ayurvedic botanical infusion curated explicitly for your clinical wellness profile.
                                             </p>
@@ -678,7 +678,7 @@ export function FindYourBlendPage() {
                                         <div className="space-y-6">
                                             <div className="flex items-center justify-center gap-2 mb-2">
                                                 <span className="h-[1px] w-4 bg-[#C6A85B]/35" />
-                                                <h3 className="font-['Gloock'] text-[18px] text-[#C6A85B] uppercase tracking-[0.15em] text-center">
+                                                <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-[18px] text-[#C6A85B] uppercase tracking-[0.15em] text-center">
                                                     Your Complete Trio Protocol
                                                 </h3>
                                                 <span className="h-[1px] w-4 bg-[#C6A85B]/35" />
@@ -705,7 +705,7 @@ export function FindYourBlendPage() {
                                                                     {p.benefit}
                                                                 </span>
                                                                 <Link to={`/products/${p.id}`}>
-                                                                    <h4 className="font-['Gloock'] text-[16px] leading-snug text-white hover:text-[#E5D08A] transition-colors mb-2">
+                                                                    <h4 className="font-['Cormorant_Garamond',serif] font-semibold text-[16px] leading-snug text-white hover:text-[#E5D08A] transition-colors mb-2">
                                                                         {p.name}
                                                                     </h4>
                                                                 </Link>
@@ -737,7 +737,7 @@ export function FindYourBlendPage() {
                                                                             >
                                                                                 <Minus className="w-2.5 h-2.5" />
                                                                             </button>
-                                                                            <span className="flex-1 text-center font-['Gloock'] text-[12px] text-white leading-none">
+                                                                            <span className="flex-1 text-center font-['Cormorant_Garamond',serif] font-semibold text-[12px] text-white leading-none">
                                                                                 {qty}
                                                                             </span>
                                                                             <button
