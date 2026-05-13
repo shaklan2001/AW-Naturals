@@ -30,7 +30,7 @@ export function CustomerProfilePage() {
             <SectionWrapper className="max-w-5xl">
                 <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
                     <div>
-                        <h1 className="font-['Gloock'] text-4xl tracking-tight text-[#F5F5DC] md:text-5xl">Your Profile</h1>
+                        <h1 className="font-['Cormorant_Garamond',serif] font-semibold text-4xl tracking-tight text-[#F5F5DC] md:text-5xl">Your Profile</h1>
                         <p className="mt-2 font-['Inter'] text-sm text-white/55">
                             Keep your profile updated for fast checkout and accurate order delivery.
                         </p>

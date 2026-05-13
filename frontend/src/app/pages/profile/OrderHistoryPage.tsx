@@ -42,7 +42,7 @@ export function OrderHistoryPage() {
   return (
     <div className="min-h-screen bg-[#0B0B0B] pb-20 pt-28 text-[#F5F5DC]">
       <SectionWrapper className="max-w-5xl">
-        <h1 className="mb-6 font-['Gloock'] text-4xl tracking-tight">Order History</h1>
+        <h1 className="mb-6 font-['Cormorant_Garamond',serif] font-semibold text-4xl tracking-tight">Order History</h1>
         <GlassCard className="p-7 md:p-9" hoverEffect={false}>
           {!isAuthenticated ? (
             <div className="text-center">

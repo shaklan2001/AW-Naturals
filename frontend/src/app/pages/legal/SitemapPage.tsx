@@ -62,7 +62,7 @@ export function SitemapPage() {
           <p className="font-['Inter'] text-[10px] font-semibold uppercase tracking-[0.32em] text-[#c8a84b]/85">
             Site navigation
           </p>
-          <h1 className="mt-3 font-['Gloock'] text-[clamp(2rem,5vw,3rem)] leading-tight tracking-tight text-[#F5F5DC]">
+          <h1 className="mt-3 font-['Cormorant_Garamond',serif] font-semibold text-[clamp(2rem,5vw,3rem)] leading-tight tracking-tight text-[#F5F5DC]">
             Sitemap
           </h1>
           <p className="mt-4 max-w-2xl font-['Inter'] text-base font-light leading-relaxed text-white/55 md:text-lg">

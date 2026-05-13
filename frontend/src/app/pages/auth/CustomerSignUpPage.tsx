@@ -30,7 +30,7 @@ export function CustomerSignUpPage() {
         <p className="text-center font-['Inter'] text-[10px] font-semibold uppercase tracking-[0.34em] text-[#9a7320]">
           Customer account
         </p>
-        <h1 className="mt-3 text-center font-['Gloock'] text-[2rem] tracking-tight md:text-[2.25rem]" style={{ fontWeight: 400 }}>
+        <h1 className="mt-3 text-center font-['Cormorant_Garamond',serif] font-semibold text-[2rem] tracking-tight md:text-[2.25rem]" style={{ fontWeight: 600 }}>
           Create an account
         </h1>
         <p className="mt-4 text-center font-['Inter'] text-sm leading-relaxed text-[#5c554c]">
