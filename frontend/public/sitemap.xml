@@ -2,146 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.awnaturals.in/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/about</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/services</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/contact</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/find-your-blend</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/products</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/products?category=Herbal%20Infusions</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/products?category=Oral%20Care%20Line</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/products?category=Skincare%20Line</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/blog</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/privacy-policy</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/terms-of-service</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/refund-policy</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/accessibility</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.awnaturals.in/sitemap</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.awnaturals.in/products/prod_009</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.awnaturals.in/products/prod_008</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.awnaturals.in/products/prod_006</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.awnaturals.in/products/prod_007</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.awnaturals.in/products/prod_004</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.awnaturals.in/products/prod_002</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.awnaturals.in/products/prod_001</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.awnaturals.in/blog/universal-mirror-world-outside-shapes-cells-within</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.awnaturals.in/blog/architecture-of-vitality-ayurvedic-lifestyle</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>
