@@ -25,10 +25,10 @@ export function MainHero() {
                 >
                     <h1 className="flex flex-col items-center justify-center font-['Cormorant_Garamond',serif] text-[#FAF6ED] tracking-tight drop-shadow-2xl">
                         <span className="block text-[1.75rem] sm:text-3xl md:text-3xl lg:text-[2rem] font-semibold tracking-wide opacity-95 mb-1.5 lg:mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">
-                            Your Daily Dose of
+                            Elevating Your Daily Rituals for
                         </span>
                         <span className="block italic font-bold text-[3.5rem] sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.9] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
-                            Clinical Wellness.
+                            Ultimate Well-Being
                         </span>
                     </h1>
                 </div>

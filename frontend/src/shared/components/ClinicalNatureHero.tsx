@@ -175,13 +175,13 @@ export function ClinicalNatureHero({
                                 className="cnh-h-line1 block font-normal leading-tight tracking-tight"
                                 style={{ fontSize: 'clamp(1.1rem,3.8vw,1.7rem)', textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}
                             >
-                                Your Daily Dose of
+                                Elevating Your Daily Rituals for
                             </span>
                             <span
                                 className="cnh-h-line2 mt-1 block font-bold leading-[1.05] tracking-tight md:mt-2"
                                 style={{ fontSize: 'clamp(2.4rem,9vw,4.2rem)', textShadow: '0 4px 24px rgba(0,0,0,0.7)' }}
                             >
-                                Clinical Wellness.
+                                Ultimate Well-Being
                             </span>
                         </h1>
                     </div>
