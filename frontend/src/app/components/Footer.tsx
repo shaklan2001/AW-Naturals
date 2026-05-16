@@ -24,8 +24,12 @@ export function Footer() {
                             </div>
                         </Link>
                         <p className="mb-8 max-w-[280px] font-['Inter'] text-[15px] font-light leading-relaxed text-white/50">
-                            Clinical wellness through doctor-formulated herbal infusions. Bridging ancient wisdom with
-                            modern science.
+                            Nature Perfected by Healthcare Expertise.
+                            <br />
+                            <br />
+                            We combine clinical healthcare roots with the world's most pristine, all-natural ingredients.
+                            From functional daily rituals to holistic essentials, we design premium wellness solutions
+                            to elevate your everyday health.
                         </p>
                         <div className="flex gap-5">
                             <a
