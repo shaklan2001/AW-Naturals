@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "tailwindcss";
+
+/* Minimal v5 palette — aligned with admin/simple-vite-ts/src/theme/palette.ts */
+@layer base {
+  :root {
+    --minimal-bg: #f4f6f8;
+    --minimal-paper: #ffffff;
+    --minimal-primary: #00a76f;
+    --minimal-primary-hover: #009660;
+    --minimal-primary-dark: #007867;
+    --minimal-text: #212b36;
+    --minimal-text-secondary: #637381;
+    --minimal-text-disabled: #919eab;
+    --minimal-border: rgba(145, 158, 171, 0.2);
+    --minimal-border-strong: rgba(145, 158, 171, 0.32);
+    --minimal-shadow: 0 8px 16px rgba(145, 158, 171, 0.12);
+    --minimal-shadow-card: 0 0 2px 0 rgba(145, 158, 171, 0.2), 0 12px 24px -4px rgba(145, 158, 171, 0.12);
+    --minimal-nav-radius: 8px;
+    --minimal-header-h: 80px;
+    --minimal-nav-w: 280px;
+    --minimal-nav-mini-w: 88px;
+    --radius: 0.75rem;
+    --background: 210 20% 98%;
+    --foreground: 220 20% 14%;
+    --primary: 160 100% 33%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 210 16% 96%;
+    --muted-foreground: 215 16% 47%;
+    --border: 214 20% 90%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--minimal-bg);
+    color: var(--minimal-text);
+    margin: 0;
+    padding: 0;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .minimal-auth-pattern {
+    background-color: #fafbfc;
+    background-image: radial-gradient(rgba(145, 158, 171, 0.18) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+/* Scrollbar — neutral */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(145, 158, 171, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(145, 158, 171, 0.55);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.page-enter {
+  animation: fadeIn 0.24s ease forwards;
+}
+
+/* TipTap */
+.tiptap {
+  outline: none;
+  min-height: 300px;
+  padding: 1rem;
+  line-height: 1.7;
+}
+.tiptap h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0.67em 0;
+  color: var(--minimal-text);
+}
+.tiptap h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0.75em 0;
+  color: var(--minimal-text);
+}
+.tiptap h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 0.83em 0;
+  color: var(--minimal-text);
+}
+.tiptap p {
+  margin: 0.5em 0;
+}
+.tiptap ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+.tiptap ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+.tiptap blockquote {
+  border-left: 4px solid var(--minimal-primary);
+  padding-left: 1em;
+  margin: 1em 0;
+  color: var(--minimal-text-secondary);
+  font-style: italic;
+}
+.tiptap strong {
+  font-weight: 700;
+}
+.tiptap em {
+  font-style: italic;
+}
+.tiptap mark {
+  background-color: #fef08a;
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+}
+.tiptap img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 0.5em 0;
+  display: block;
+}
+.tiptap code {
+  background: #f4f6f8;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 0.9em;
+}
+.tiptap pre {
+  background: #212b36;
+  color: #f9fafb;
+  padding: 1em;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+}
+.tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: #919eab;
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
