@@ -10,8 +10,12 @@ export function TrustStrip() {
   ];
 
   return (
-    <section className="relative py-12 lg:py-24 bg-[#0B0B0B] overflow-hidden">
-      {/* Background Subtle Gradient Blending */}
+    <section className="relative -mt-10 overflow-hidden bg-[#0B0B0B] py-12 sm:-mt-14 lg:-mt-20 lg:py-24">
+      {/* Soft top blend from hero */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B0B0B] via-[#0B0B0B]/80 to-transparent sm:h-28 lg:h-32"
+        aria-hidden
+      />
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#C6A85B]/20 to-transparent"></div>
       <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 100% at 50% 0%, rgba(200, 180, 100, 0.03) 0%, transparent 100%)' }}></div>
 
