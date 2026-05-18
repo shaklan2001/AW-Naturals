@@ -1,40 +1,55 @@
 import React from 'react';
 
+const HERO_IMAGE = '/assets/home_page.webp';
+
 export function MainHero() {
     return (
-        <section className="relative w-full overflow-hidden flex flex-col z-10 bg-[#0B0B0B] min-h-[100svh]">
-            {/* Background Image: full-bleed on mobile, custom-positioned on desktop */}
-            <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden lg:inset-x-0 lg:bottom-0 lg:top-[1vh]">
+        <section className="relative z-10 flex min-h-[100svh] w-full flex-col overflow-hidden bg-[#0B0B0B] pb-0">
+            <div className="absolute inset-0 z-0 flex flex-col justify-end bg-[#0B0B0B]">
                 <img
-                    src="/assets/home_page.webp"
-                    alt="AW Naturals — clinical herbal tea infusions"
-                    className="h-full w-full object-cover will-change-transform scale-[1.07] lg:scale-100 object-[center_31%] lg:object-[center_39%] lg:[transform:translate3d(0,18px,0)]"
+                    src={HERO_IMAGE}
+                    alt="AW Naturals — clinical herbal tea infusions and wellness products"
+                    width={1672}
+                    height={941}
+                    decoding="async"
+                    fetchPriority="high"
+                    className="block h-auto w-full max-h-[100svh]"
                 />
-                {/* Mobile dark backdrop overlay to ensure flawless text legibility */}
-                <div className="absolute inset-0 bg-black/35 lg:hidden pointer-events-none" />
-                
-                {/* Bottom gradient veil blending into the black page background */}
-                <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B]/90 to-transparent pointer-events-none" />
+
+                {/* Headline legibility — light touch so products stay visible */}
+                <div
+                    className="pointer-events-none absolute inset-0"
+                    aria-hidden
+                    style={{
+                        background:
+                            'radial-gradient(ellipse 80% 50% at 50% 30%, rgba(0,0,0,0.38) 0%, transparent 65%), linear-gradient(to bottom, rgba(11,11,11,0.3) 0%, transparent 18%, transparent 70%, rgba(11,11,11,0.2) 100%)',
+                    }}
+                />
+
+                {/* Cloudy bottom veil — soft merge into next section */}
+                <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-[12vh] min-h-[60px]"
+                    aria-hidden
+                    style={{
+                        background: 'linear-gradient(to bottom, transparent 0%, rgba(11,11,11,0.4) 60%, #0B0B0B 100%)',
+                    }}
+                />
             </div>
 
-            <div className="relative z-10 w-full max-w-screen-2xl mx-auto flex flex-col justify-between h-full min-h-[100svh] pt-[calc(7.5rem+env(safe-area-inset-top,0px))] pb-12 lg:justify-between lg:h-full lg:min-h-[100svh] lg:pt-[15vh] lg:pb-12">
-                {/* Heading */}
+            <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-screen-2xl flex-col justify-start pt-[calc(7.5rem+env(safe-area-inset-top,0px))] pb-8 sm:pt-[calc(8.5rem+env(safe-area-inset-top,0px))] md:pt-[calc(9.5rem+env(safe-area-inset-top,0px))] lg:pt-[10vh] xl:pt-[12vh] lg:pb-10">
                 <div
-                    className="flex flex-col items-center text-center animate-fade-in-up px-4 lg:pt-0 lg:pb-0"
+                    className="flex animate-fade-in-up flex-col items-center px-4 text-center"
                     style={{ animationDuration: '1.2s' }}
                 >
-                    <h1 className="flex flex-col items-center justify-center font-['Cormorant_Garamond',serif] text-[#FAF6ED] tracking-tight drop-shadow-2xl">
-                        <span className="block text-[1.75rem] sm:text-3xl md:text-3xl lg:text-[2rem] font-semibold tracking-wide opacity-95 mb-1.5 lg:mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">
+                    <h1 className="flex flex-col items-center justify-center font-['Cormorant_Garamond',serif] tracking-tight text-[#FAF6ED] drop-shadow-2xl">
+                        <span className="mb-0 block text-[1.75rem] font-semibold tracking-wide opacity-95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)] sm:text-3xl md:text-3xl lg:text-[2rem]">
                             Elevating Your Daily Rituals for
                         </span>
-                        <span className="block italic font-bold text-[3.5rem] sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.9] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
+                        <span className="-mt-1 block text-[3.5rem] font-bold italic leading-[0.9] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] sm:-mt-2 sm:text-6xl md:-mt-3 md:text-7xl lg:-mt-4 lg:text-[6.5rem]">
                             Ultimate Well-Being
                         </span>
                     </h1>
                 </div>
-
-                {/* Bottom spacing helper for mobile layout symmetry */}
-                <div className="w-full h-12 lg:hidden pointer-events-none" />
             </div>
 
             <style
