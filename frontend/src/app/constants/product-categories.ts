@@ -3,6 +3,7 @@ export const PRODUCT_CATEGORY = {
   herbalInfusions: "Herbal Infusions",
   oralCareLine: "Oral Care Line",
   skincareLine: "Skincare Line",
+  nightRitualLine: "Night Ritual Line",
 } as const;
 
 export type ProductCategoryFilter = (typeof PRODUCT_CATEGORY)[keyof typeof PRODUCT_CATEGORY];
@@ -23,6 +24,11 @@ export const PRODUCT_CATEGORY_NAV = [
     label: "Skincare line",
     value: PRODUCT_CATEGORY.skincareLine,
     to: "/products?category=Skincare%20Line",
+  },
+  {
+    label: "Night rituals",
+    value: PRODUCT_CATEGORY.nightRitualLine,
+    to: "/products?category=Night%20Ritual%20Line",
   },
 ] as const;
 
@@ -50,6 +56,16 @@ export function productMatchesNavCategory(navCategory: string, productCategory: 
       "skin care",
       "botanical skincare",
       "botanical skin care",
+    ].includes(pc);
+  }
+
+  if (nav === PRODUCT_CATEGORY.nightRitualLine.toLowerCase()) {
+    return [
+      "night ritual line",
+      "night rituals",
+      "night ritual",
+      "the night ritual",
+      "circadian renewal",
     ].includes(pc);
   }
 

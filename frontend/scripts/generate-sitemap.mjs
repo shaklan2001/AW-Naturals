@@ -38,6 +38,7 @@ const STATIC_ROUTES = [
   { path: '/products?category=Herbal%20Infusions', changefreq: 'weekly', priority: '0.85' },
   { path: '/products?category=Oral%20Care%20Line', changefreq: 'weekly', priority: '0.85' },
   { path: '/products?category=Skincare%20Line', changefreq: 'weekly', priority: '0.85' },
+  { path: '/products?category=Night%20Ritual%20Line', changefreq: 'weekly', priority: '0.85' },
   { path: '/blog', changefreq: 'weekly', priority: '0.8' },
   { path: '/privacy-policy', changefreq: 'yearly', priority: '0.3' },
   { path: '/terms-of-service', changefreq: 'yearly', priority: '0.3' },

@@ -8,10 +8,16 @@ import { ProductsPageHeader } from './components/ProductsPageHeader';
 import { ProductListRow } from './components/ProductListRow';
 import { ProductsLoadingState } from './components/ProductsLoadingState';
 import { ProductsErrorState } from './components/ProductsErrorState';
-
 import { PremiumSectionChip } from '../../components/PremiumSectionChip';
 import { UpcomingProductsSection } from './components/UpcomingProductsSection';
 import { PRODUCT_CATEGORY } from '../../constants/product-categories';
+import {
+    getProductShelfCopy,
+    getProductShelfOrder,
+    resolveProductShelf,
+    type ProductShelfKey,
+} from '../../constants/product-category-copy';
+import { ProductsCategoryHeading } from './components/ProductsCategoryHeading';
 
 export function ProductsPage() {
     const [searchParams] = useSearchParams();
@@ -42,34 +48,26 @@ export function ProductsPage() {
         : products;
     const upcomingProducts = isShopAll ? products.filter((product) => product.status === 'upcoming') : [];
 
-    const productsByCategory = catalogProducts.reduce(
+    const productsByShelf = catalogProducts.reduce(
         (acc, product) => {
-            const cat = product.category || 'Other';
-            if (!acc[cat]) acc[cat] = [];
-            acc[cat].push(product);
+            const shelf = resolveProductShelf(product);
+            if (!acc[shelf]) acc[shelf] = [];
+            acc[shelf].push(product);
             return acc;
         },
-        {} as Record<string, typeof catalogProducts>
+        {} as Partial<Record<ProductShelfKey, StorefrontProduct[]>>
     );
 
-    const categoryOrder = [
-        PRODUCT_CATEGORY.herbalInfusions,
-        PRODUCT_CATEGORY.oralCareLine,
-        PRODUCT_CATEGORY.skincareLine,
-        'Other',
-    ];
-    const sortedCategories = Object.keys(productsByCategory).sort((a, b) => {
-        const indexA = categoryOrder.indexOf(a);
-        const indexB = categoryOrder.indexOf(b);
-        return (indexA === -1 ? 99 : indexA) - (indexB === -1 ? 99 : indexB);
-    });
+    const visibleShelves = isShopAll
+        ? getProductShelfOrder().filter((shelf) => (productsByShelf[shelf]?.length ?? 0) > 0)
+        : null;
 
     return (
         <div className="bg-[#0B0B0B] bg-[radial-gradient(ellipse_at_top,rgba(15,61,46,0.45),transparent_60vw)] min-h-screen relative">
             <ProductsAmbientBackground />
 
             <div className="relative z-10 pointer-events-auto">
-                <ProductsPageHeader />
+                <ProductsPageHeader selectedCategory={selectedCategory} />
 
                 <section className="py-12 pb-24 px-6">
                     <div className="max-w-7xl mx-auto">
@@ -88,26 +86,47 @@ export function ProductsPage() {
                                     Shop all
                                 </Link>
                             </div>
+                        ) : isShopAll && visibleShelves ? (
+                            visibleShelves.map((shelf) => {
+                                const shelfCopy = getProductShelfCopy(shelf);
+                                const shelfProducts = productsByShelf[shelf] ?? [];
+
+                                return (
+                                    <div key={shelf} className="mb-24 last:mb-0">
+                                        <div className="mb-12 mx-auto max-w-3xl text-center">
+                                            <div className="mb-5 flex justify-center">
+                                                <PremiumSectionChip>{shelfCopy.chip}</PremiumSectionChip>
+                                            </div>
+                                            <ProductsCategoryHeading copy={shelfCopy} size="section" />
+                                        </div>
+                                        <div className="grid grid-cols-1 gap-10 max-w-5xl mx-auto">
+                                            {shelfProducts.map((product, index) => (
+                                                <ProductListRow
+                                                    key={product.id}
+                                                    product={product}
+                                                    index={index}
+                                                    quantityInCart={getItemQuantity(product.id)}
+                                                    onAddToCart={handleAddToCart}
+                                                    onDecrease={handleDecrease}
+                                                />
+                                            ))}
+                                        </div>
+                                    </div>
+                                );
+                            })
                         ) : (
-                            sortedCategories.map((category) => (
-                                <div key={category} className="mb-24 last:mb-0">
-                                    <div className="mb-12 flex justify-center">
-                                        <PremiumSectionChip>{category}</PremiumSectionChip>
-                                    </div>
-                                    <div className="grid grid-cols-1 gap-10 max-w-5xl mx-auto">
-                                        {productsByCategory[category].map((product, index) => (
-                                            <ProductListRow
-                                                key={product.id}
-                                                product={product}
-                                                index={index}
-                                                quantityInCart={getItemQuantity(product.id)}
-                                                onAddToCart={handleAddToCart}
-                                                onDecrease={handleDecrease}
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-                            ))
+                            <div className="grid grid-cols-1 gap-10 max-w-5xl mx-auto">
+                                {catalogProducts.map((product, index) => (
+                                    <ProductListRow
+                                        key={product.id}
+                                        product={product}
+                                        index={index}
+                                        quantityInCart={getItemQuantity(product.id)}
+                                        onAddToCart={handleAddToCart}
+                                        onDecrease={handleDecrease}
+                                    />
+                                ))}
+                            </div>
                         )}
                     </div>
                 </section>

@@ -59,7 +59,7 @@ const RITUAL_CARDS: RitualCard[] = [
         description:
             'Decompress. Restore. Reconnect. End your day with a grounding foot massage, meticulously crafted oil for deep, restorative sleep.',
         cta: 'Shop The Night Oil',
-        to: '/products?category=Oral%20Care%20Line',
+        to: '/products?category=Night%20Ritual%20Line',
         image: (
             <ImageWithFallback
                 src="/assets/night_oil.png"

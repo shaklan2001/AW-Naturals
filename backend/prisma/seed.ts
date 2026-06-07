@@ -33,7 +33,8 @@ async function main() {
    * Full catalog (single row per id — re-seed clears duplicates):
    * - prod_001–004: original four clinical teas (active)
    * - prod_005–006: Herbal infusion + The Bar (active)
-   * - prod_007–009: upcoming rituals — shelved under Oral Care Line for storefront nav
+   * - prod_007, prod_009: upcoming oral care rituals
+   * - prod_008: upcoming night ritual (foot massage oil)
    */
   const cloud = (path: string) =>
     `https://res.cloudinary.com/dfucsfgbs/image/upload/q_auto/f_auto/${path}`;
@@ -148,7 +149,7 @@ async function main() {
         "Warming botanical massage oil for feet and calves — unwind tension after long days with a silky, non-greasy glide.",
       benefit: "Rest & Recovery",
       price: 549,
-      category: "Oral Care Line",
+      category: "Night Ritual Line",
       stock: 0,
       status: ProductStatus.upcoming,
       images: [

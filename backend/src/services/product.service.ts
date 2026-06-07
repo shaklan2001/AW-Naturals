@@ -95,6 +95,21 @@ function storefrontCategoryVariants(category: string): string[] {
     ];
   }
 
+  if (
+    normalized === "night ritual line" ||
+    normalized === "night rituals" ||
+    normalized === "night ritual" ||
+    normalized === "the night ritual" ||
+    normalized === "circadian renewal"
+  ) {
+    return [
+      "Night Ritual Line",
+      "Night Rituals",
+      "Night Ritual",
+      "The Night Ritual",
+    ];
+  }
+
   return [category.trim()];
 }
 
